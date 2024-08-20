@@ -34,6 +34,8 @@
             this.email_textBox = new System.Windows.Forms.TextBox();
             this.password_textBox = new System.Windows.Forms.TextBox();
             this.login_btn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,16 +63,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(436, 156);
+            this.label2.Location = new System.Drawing.Point(450, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(471, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // email_textBox
             // 
             this.email_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_textBox.Location = new System.Drawing.Point(495, 221);
             this.email_textBox.Multiline = true;
             this.email_textBox.Name = "email_textBox";
@@ -80,7 +83,7 @@
             // password_textBox
             // 
             this.password_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_textBox.Location = new System.Drawing.Point(495, 302);
             this.password_textBox.Multiline = true;
             this.password_textBox.Name = "password_textBox";
@@ -100,11 +103,31 @@
             this.login_btn.Text = "Login";
             this.login_btn.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(495, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(495, 282);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Password";
+            // 
             // login_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 567);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.password_textBox);
             this.Controls.Add(this.email_textBox);
@@ -115,6 +138,7 @@
             this.Name = "login_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.login_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,6 +153,8 @@
         private System.Windows.Forms.TextBox email_textBox;
         private System.Windows.Forms.TextBox password_textBox;
         private System.Windows.Forms.Button login_btn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
