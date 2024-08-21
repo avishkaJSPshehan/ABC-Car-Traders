@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.user_login_panel = new System.Windows.Forms.Panel();
-            this.Login_lb = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.email_textbox = new System.Windows.Forms.TextBox();
+            this.cancle_btn = new System.Windows.Forms.Button();
+            this.login_btn = new System.Windows.Forms.Button();
             this.password_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.login_btn = new System.Windows.Forms.Button();
-            this.cancle_btn = new System.Windows.Forms.Button();
+            this.email_textbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Login_lb = new System.Windows.Forms.Label();
             this.user_login_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,38 +54,33 @@
             this.user_login_panel.Size = new System.Drawing.Size(430, 312);
             this.user_login_panel.TabIndex = 0;
             // 
-            // Login_lb
+            // cancle_btn
             // 
-            this.Login_lb.AutoSize = true;
-            this.Login_lb.BackColor = System.Drawing.Color.Transparent;
-            this.Login_lb.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_lb.Location = new System.Drawing.Point(175, 22);
-            this.Login_lb.Name = "Login_lb";
-            this.Login_lb.Size = new System.Drawing.Size(109, 32);
-            this.Login_lb.TabIndex = 1;
-            this.Login_lb.Text = "Sign in";
-            this.Login_lb.Click += new System.EventHandler(this.Login_lb_Click);
+            this.cancle_btn.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.cancle_btn.FlatAppearance.BorderSize = 0;
+            this.cancle_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancle_btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancle_btn.Location = new System.Drawing.Point(45, 250);
+            this.cancle_btn.Name = "cancle_btn";
+            this.cancle_btn.Size = new System.Drawing.Size(342, 37);
+            this.cancle_btn.TabIndex = 7;
+            this.cancle_btn.Text = "Cancle";
+            this.cancle_btn.UseVisualStyleBackColor = false;
+            this.cancle_btn.Click += new System.EventHandler(this.cancle_btn_Click);
             // 
-            // label1
+            // login_btn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Email";
-            // 
-            // email_textbox
-            // 
-            this.email_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.email_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email_textbox.Location = new System.Drawing.Point(45, 88);
-            this.email_textbox.Multiline = true;
-            this.email_textbox.Name = "email_textbox";
-            this.email_textbox.Size = new System.Drawing.Size(342, 30);
-            this.email_textbox.TabIndex = 3;
+            this.login_btn.BackColor = System.Drawing.Color.Crimson;
+            this.login_btn.FlatAppearance.BorderSize = 0;
+            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_btn.Location = new System.Drawing.Point(45, 207);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(342, 37);
+            this.login_btn.TabIndex = 6;
+            this.login_btn.Text = "Log in";
+            this.login_btn.UseVisualStyleBackColor = false;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // password_textbox
             // 
@@ -109,32 +104,38 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
-            // login_btn
+            // email_textbox
             // 
-            this.login_btn.BackColor = System.Drawing.Color.Crimson;
-            this.login_btn.FlatAppearance.BorderSize = 0;
-            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login_btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_btn.Location = new System.Drawing.Point(45, 207);
-            this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(342, 37);
-            this.login_btn.TabIndex = 6;
-            this.login_btn.Text = "Log in";
-            this.login_btn.UseVisualStyleBackColor = false;
+            this.email_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.email_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.email_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_textbox.Location = new System.Drawing.Point(45, 88);
+            this.email_textbox.Multiline = true;
+            this.email_textbox.Name = "email_textbox";
+            this.email_textbox.Size = new System.Drawing.Size(342, 30);
+            this.email_textbox.TabIndex = 3;
             // 
-            // cancle_btn
+            // label1
             // 
-            this.cancle_btn.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.cancle_btn.FlatAppearance.BorderSize = 0;
-            this.cancle_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancle_btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancle_btn.Location = new System.Drawing.Point(45, 250);
-            this.cancle_btn.Name = "cancle_btn";
-            this.cancle_btn.Size = new System.Drawing.Size(342, 37);
-            this.cancle_btn.TabIndex = 7;
-            this.cancle_btn.Text = "Cancle";
-            this.cancle_btn.UseVisualStyleBackColor = false;
-            this.cancle_btn.Click += new System.EventHandler(this.cancle_btn_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Email";
+            // 
+            // Login_lb
+            // 
+            this.Login_lb.AutoSize = true;
+            this.Login_lb.BackColor = System.Drawing.Color.Transparent;
+            this.Login_lb.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_lb.Location = new System.Drawing.Point(175, 22);
+            this.Login_lb.Name = "Login_lb";
+            this.Login_lb.Size = new System.Drawing.Size(109, 32);
+            this.Login_lb.TabIndex = 1;
+            this.Login_lb.Text = "Sign in";
+            this.Login_lb.Click += new System.EventHandler(this.Login_lb_Click);
             // 
             // user_login
             // 
