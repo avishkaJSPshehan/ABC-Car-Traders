@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.car_details_btn = new System.Windows.Forms.Button();
             this.parts_details_btn = new System.Windows.Forms.Button();
             this.order_status_btn = new System.Windows.Forms.Button();
@@ -40,7 +44,6 @@
             this.dataGridView_car = new System.Windows.Forms.DataGridView();
             this.search_parts = new System.Windows.Forms.Button();
             this.parts_search_box = new System.Windows.Forms.TextBox();
-            this.dataGridView_parts = new System.Windows.Forms.DataGridView();
             this.dataGridView_order = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +55,19 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_parts = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_car)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_order)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parts)).BeginInit();
             this.SuspendLayout();
             // 
             // car_details_btn
@@ -209,26 +222,15 @@
             this.parts_search_box.Size = new System.Drawing.Size(874, 30);
             this.parts_search_box.TabIndex = 18;
             // 
-            // dataGridView_parts
-            // 
-            this.dataGridView_parts.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView_parts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_parts.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_parts.Location = new System.Drawing.Point(387, 204);
-            this.dataGridView_parts.Name = "dataGridView_parts";
-            this.dataGridView_parts.RowTemplate.Height = 24;
-            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 546);
-            this.dataGridView_parts.TabIndex = 20;
-            // 
             // dataGridView_order
             // 
             this.dataGridView_order.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_order.Location = new System.Drawing.Point(387, 261);
+            this.dataGridView_order.Location = new System.Drawing.Point(387, 307);
             this.dataGridView_order.Name = "dataGridView_order";
             this.dataGridView_order.RowTemplate.Height = 24;
-            this.dataGridView_order.Size = new System.Drawing.Size(1145, 490);
+            this.dataGridView_order.Size = new System.Drawing.Size(1145, 444);
             this.dataGridView_order.TabIndex = 21;
             // 
             // Column1
@@ -301,6 +303,127 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
+            // dataGridView_parts
+            // 
+            this.dataGridView_parts.AllowUserToAddRows = false;
+            this.dataGridView_parts.AllowUserToDeleteRows = false;
+            this.dataGridView_parts.AllowUserToResizeColumns = false;
+            this.dataGridView_parts.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_parts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView_parts.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView_parts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_parts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_parts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView_parts.ColumnHeadersHeight = 30;
+            this.dataGridView_parts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_parts.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView_parts.EnableHeadersVisualStyles = false;
+            this.dataGridView_parts.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView_parts.Location = new System.Drawing.Point(388, 135);
+            this.dataGridView_parts.Name = "dataGridView_parts";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_parts.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView_parts.RowHeadersVisible = false;
+            this.dataGridView_parts.RowTemplate.Height = 24;
+            this.dataGridView_parts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 616);
+            this.dataGridView_parts.TabIndex = 22;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Part Name ";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Part Number ";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Manufacturer ";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Warranty Period";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Stock_Quantity";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Condition";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Compatibility";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Part Status";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
             // User_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,13 +434,13 @@
             this.Controls.Add(this.dataGridView_order);
             this.Controls.Add(this.search_parts);
             this.Controls.Add(this.parts_search_box);
-            this.Controls.Add(this.dataGridView_parts);
             this.Controls.Add(this.search_car);
             this.Controls.Add(this.car_search_box);
-            this.Controls.Add(this.dataGridView_car);
             this.Controls.Add(this.order_status_btn);
             this.Controls.Add(this.parts_details_btn);
             this.Controls.Add(this.car_details_btn);
+            this.Controls.Add(this.dataGridView_parts);
+            this.Controls.Add(this.dataGridView_car);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User_form";
@@ -325,8 +448,8 @@
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_car)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_order)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +465,6 @@
         private System.Windows.Forms.DataGridView dataGridView_car;
         private System.Windows.Forms.Button search_parts;
         private System.Windows.Forms.TextBox parts_search_box;
-        private System.Windows.Forms.DataGridView dataGridView_parts;
         private System.Windows.Forms.DataGridView dataGridView_order;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -354,5 +476,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridView dataGridView_parts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }
