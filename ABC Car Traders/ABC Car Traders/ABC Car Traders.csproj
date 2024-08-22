@@ -72,6 +72,12 @@
     <Compile Include="user_login.Designer.cs">
       <DependentUpon>user_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Register.Designer.cs">
+      <DependentUpon>User_Register.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +100,9 @@
     <EmbeddedResource Include="user_login.resx">
       <DependentUpon>user_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User_Register.resx">
+      <DependentUpon>User_Register.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
