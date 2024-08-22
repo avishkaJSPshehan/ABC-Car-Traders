@@ -62,7 +62,7 @@ namespace ABC_Car_Traders
                             cmd.Parameters.AddWithValue("@mobile", mobile_textbox.Text.Trim());
                             cmd.Parameters.AddWithValue("@email", email_textbox.Text.Trim());
                             cmd.Parameters.AddWithValue("@password", password_textbox.Text.Trim());
-                            cmd.Parameters.AddWithValue("@state", today);
+                            cmd.Parameters.AddWithValue("@state", "0");
 
                             cmd.ExecuteNonQuery();
 
