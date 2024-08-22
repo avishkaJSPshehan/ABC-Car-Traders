@@ -31,16 +31,16 @@
             this.user_login_panel = new System.Windows.Forms.Panel();
             this.cancle_btn = new System.Windows.Forms.Button();
             this.login_btn = new System.Windows.Forms.Button();
-            this.password_textbox = new System.Windows.Forms.TextBox();
+            this.lname_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.email_textbox = new System.Windows.Forms.TextBox();
+            this.fname_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Login_lb = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mobile_textbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.email_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.password_textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.user_login_panel.SuspendLayout();
             this.SuspendLayout();
@@ -48,17 +48,17 @@
             // user_login_panel
             // 
             this.user_login_panel.BackColor = System.Drawing.Color.LightGray;
-            this.user_login_panel.Controls.Add(this.textBox3);
+            this.user_login_panel.Controls.Add(this.password_textbox);
             this.user_login_panel.Controls.Add(this.cancle_btn);
             this.user_login_panel.Controls.Add(this.login_btn);
             this.user_login_panel.Controls.Add(this.label5);
-            this.user_login_panel.Controls.Add(this.textBox2);
-            this.user_login_panel.Controls.Add(this.label4);
-            this.user_login_panel.Controls.Add(this.textBox1);
-            this.user_login_panel.Controls.Add(this.label3);
-            this.user_login_panel.Controls.Add(this.password_textbox);
-            this.user_login_panel.Controls.Add(this.label2);
             this.user_login_panel.Controls.Add(this.email_textbox);
+            this.user_login_panel.Controls.Add(this.label4);
+            this.user_login_panel.Controls.Add(this.mobile_textbox);
+            this.user_login_panel.Controls.Add(this.label3);
+            this.user_login_panel.Controls.Add(this.lname_textbox);
+            this.user_login_panel.Controls.Add(this.label2);
+            this.user_login_panel.Controls.Add(this.fname_textbox);
             this.user_login_panel.Controls.Add(this.label1);
             this.user_login_panel.Controls.Add(this.Login_lb);
             this.user_login_panel.Location = new System.Drawing.Point(488, 35);
@@ -94,16 +94,16 @@
             this.login_btn.UseVisualStyleBackColor = false;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
-            // password_textbox
+            // lname_textbox
             // 
-            this.password_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.password_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_textbox.Location = new System.Drawing.Point(45, 148);
-            this.password_textbox.Multiline = true;
-            this.password_textbox.Name = "password_textbox";
-            this.password_textbox.Size = new System.Drawing.Size(342, 30);
-            this.password_textbox.TabIndex = 5;
+            this.lname_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lname_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lname_textbox.Location = new System.Drawing.Point(45, 148);
+            this.lname_textbox.Multiline = true;
+            this.lname_textbox.Name = "lname_textbox";
+            this.lname_textbox.Size = new System.Drawing.Size(342, 30);
+            this.lname_textbox.TabIndex = 5;
             // 
             // label2
             // 
@@ -115,16 +115,16 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name";
             // 
-            // email_textbox
+            // fname_textbox
             // 
-            this.email_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.email_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email_textbox.Location = new System.Drawing.Point(45, 88);
-            this.email_textbox.Multiline = true;
-            this.email_textbox.Name = "email_textbox";
-            this.email_textbox.Size = new System.Drawing.Size(342, 30);
-            this.email_textbox.TabIndex = 3;
+            this.fname_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.fname_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fname_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fname_textbox.Location = new System.Drawing.Point(45, 88);
+            this.fname_textbox.Multiline = true;
+            this.fname_textbox.Name = "fname_textbox";
+            this.fname_textbox.Size = new System.Drawing.Size(342, 30);
+            this.fname_textbox.TabIndex = 3;
             // 
             // label1
             // 
@@ -147,16 +147,16 @@
             this.Login_lb.TabIndex = 1;
             this.Login_lb.Text = "Create Account";
             // 
-            // textBox1
+            // mobile_textbox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(46, 209);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(342, 30);
-            this.textBox1.TabIndex = 9;
+            this.mobile_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mobile_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mobile_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mobile_textbox.Location = new System.Drawing.Point(46, 209);
+            this.mobile_textbox.Multiline = true;
+            this.mobile_textbox.Name = "mobile_textbox";
+            this.mobile_textbox.Size = new System.Drawing.Size(342, 30);
+            this.mobile_textbox.TabIndex = 9;
             // 
             // label3
             // 
@@ -168,16 +168,16 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Mobile Number";
             // 
-            // textBox2
+            // email_textbox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(46, 271);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(342, 30);
-            this.textBox2.TabIndex = 11;
+            this.email_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.email_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.email_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_textbox.Location = new System.Drawing.Point(46, 271);
+            this.email_textbox.Multiline = true;
+            this.email_textbox.Name = "email_textbox";
+            this.email_textbox.Size = new System.Drawing.Size(342, 30);
+            this.email_textbox.TabIndex = 11;
             // 
             // label4
             // 
@@ -189,16 +189,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Email Address";
             // 
-            // textBox3
+            // password_textbox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(46, 333);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(342, 30);
-            this.textBox3.TabIndex = 13;
+            this.password_textbox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.password_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.password_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_textbox.Location = new System.Drawing.Point(46, 333);
+            this.password_textbox.Multiline = true;
+            this.password_textbox.Name = "password_textbox";
+            this.password_textbox.Size = new System.Drawing.Size(342, 30);
+            this.password_textbox.TabIndex = 13;
             // 
             // label5
             // 
@@ -232,17 +232,17 @@
         #endregion
 
         private System.Windows.Forms.Panel user_login_panel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox password_textbox;
         private System.Windows.Forms.Button cancle_btn;
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox password_textbox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox email_textbox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox mobile_textbox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox lname_textbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox fname_textbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Login_lb;
     }
