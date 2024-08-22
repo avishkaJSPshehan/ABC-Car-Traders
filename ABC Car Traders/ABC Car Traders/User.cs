@@ -22,7 +22,7 @@ namespace ABC_Car_Traders
         string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\ABC_Car_Traders.mdf;Integrated Security=True;Connect Timeout=30";
 
 
-        void bind_data()
+        void bind_car_data()
         {
 
             SqlConnection conn = new SqlConnection(connection_string);
@@ -65,6 +65,50 @@ namespace ABC_Car_Traders
 
         }
 
+
+        void bind_car_part_data()
+        {
+
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM CarParts", conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+                dataGridView_car.Rows.Clear();
+
+                while (reader.Read())
+                {
+                    // Retrieve each column value
+                    string part_name = reader["part_name"].ToString();
+                    string part_number = reader["part_number"].ToString();
+                    string manufacturer = reader["manufacturer"].ToString();
+                    string price = reader["price"].ToString();
+                    string warranty_period = reader["warranty_period"].ToString();
+                    string stock_quantity = reader["stock_quantity"].ToString();
+                    string condition = reader["condition"].ToString();
+                    string compatibility = reader["compatibility"].ToString();
+                    string part_status = reader["part_status"].ToString();
+
+
+                    // Add the row to the DataGridView
+                    dataGridView_parts.Rows.Add(part_name, part_number, manufacturer, price, warranty_period, stock_quantity, condition, compatibility, part_status);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
         private void car_details_btn_Click(object sender, EventArgs e)
         {
 
@@ -76,6 +120,8 @@ namespace ABC_Car_Traders
             car_search_box.Visible = true;
             search_car.Visible = true;
             dataGridView_car.Visible = true;
+
+            bind_car_data();
 
         }
 
@@ -91,6 +137,8 @@ namespace ABC_Car_Traders
             dataGridView_car.Visible = false;
             dataGridView_order.Visible = false;
 
+            bind_car_part_data();
+
         }
 
         private void User_form_Load(object sender, EventArgs e)
@@ -105,7 +153,7 @@ namespace ABC_Car_Traders
             search_car.Visible = true;
             dataGridView_car.Visible = true;
 
-            bind_data();
+            bind_car_data();
 
         }
 
