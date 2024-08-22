@@ -128,5 +128,14 @@
   <ItemGroup>
     <None Include="Resources\register_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_home_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_home_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_panel_bg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
