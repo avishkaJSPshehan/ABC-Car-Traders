@@ -82,5 +82,12 @@ namespace ABC_Car_Traders
                 MessageBox.Show("Incorrect username or password");
             }
         }
+
+        private void user_register_btn_Click(object sender, EventArgs e)
+        {
+            User_Register user_register = new User_Register();
+            user_register.Show();
+            this.Hide();
+        }
     }
 }
