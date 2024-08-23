@@ -180,5 +180,53 @@ namespace ABC_Car_Traders
         {
             bind_car_part_data(parts_search_box.Text);
         }
+
+        private void dataGridView_car_Click(object sender, EventArgs e)
+        {
+            string imagePath = "";
+
+            Single_Product singale_product_view = new Single_Product();
+
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM CarDetails WHERE Modele = '"+ dataGridView_car.CurrentRow.Cells[1].Value.ToString() +"'", conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    imagePath = reader["Car_Image"].ToString();
+
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            singale_product_view.car_image.Image = Image.FromFile(imagePath);
+
+            singale_product_view.company_lb.Text = dataGridView_car.CurrentRow.Cells[0].Value.ToString();
+            singale_product_view.modele_lb.Text = dataGridView_car.CurrentRow.Cells[1].Value.ToString();
+            singale_product_view.product_year_lb.Text = dataGridView_car.CurrentRow.Cells[2].Value.ToString();
+            singale_product_view.price_lb.Text = dataGridView_car.CurrentRow.Cells[3].Value.ToString();
+            singale_product_view.mileage_lb.Text = dataGridView_car.CurrentRow.Cells[4].Value.ToString();
+            singale_product_view.engine_type_lb.Text = dataGridView_car.CurrentRow.Cells[5].Value.ToString();
+            singale_product_view.transmission_lb.Text = dataGridView_car.CurrentRow.Cells[6].Value.ToString();
+            singale_product_view.color_lb.Text = dataGridView_car.CurrentRow.Cells[7].Value.ToString();
+            singale_product_view.condition_lb.Text = dataGridView_car.CurrentRow.Cells[8].Value.ToString();
+            singale_product_view.status_lb.Text = dataGridView_car.CurrentRow.Cells[9].Value.ToString();
+
+            singale_product_view.ShowDialog();
+        }
     }
 }

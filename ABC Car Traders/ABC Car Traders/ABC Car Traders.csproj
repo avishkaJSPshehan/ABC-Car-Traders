@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Single_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Single_Product.Designer.cs">
+      <DependentUpon>Single_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Single_Product.resx">
+      <DependentUpon>Single_Product.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_panel_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_panel_bg1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
