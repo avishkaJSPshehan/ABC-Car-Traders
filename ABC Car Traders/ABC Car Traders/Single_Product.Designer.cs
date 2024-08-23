@@ -79,6 +79,7 @@
             this.login_btn.TabIndex = 8;
             this.login_btn.Text = "Purchase Now";
             this.login_btn.UseVisualStyleBackColor = false;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // company_lb
             // 
