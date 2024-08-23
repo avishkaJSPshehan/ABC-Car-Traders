@@ -348,7 +348,7 @@
             this.dataGridView_parts.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_parts.EnableHeadersVisualStyles = false;
             this.dataGridView_parts.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_parts.Location = new System.Drawing.Point(388, 227);
+            this.dataGridView_parts.Location = new System.Drawing.Point(388, 135);
             this.dataGridView_parts.Name = "dataGridView_parts";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -361,8 +361,9 @@
             this.dataGridView_parts.RowHeadersVisible = false;
             this.dataGridView_parts.RowTemplate.Height = 24;
             this.dataGridView_parts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 524);
+            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 616);
             this.dataGridView_parts.TabIndex = 22;
+            this.dataGridView_parts.Click += new System.EventHandler(this.dataGridView_parts_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 

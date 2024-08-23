@@ -228,5 +228,54 @@ namespace ABC_Car_Traders
 
             singale_product_view.ShowDialog();
         }
+
+        private void dataGridView_parts_Click(object sender, EventArgs e)
+        {
+            string partimagePath = "";
+
+            Single_part singale_part_view = new Single_part();
+
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM CarParts WHERE part_number = '" + dataGridView_parts.CurrentRow.Cells[1].Value.ToString() + "'", conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    partimagePath = reader["part_image"].ToString();
+
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            singale_part_view.part_image.Image = Image.FromFile(partimagePath);
+
+            singale_part_view.part_name_lb.Text = dataGridView_parts.CurrentRow.Cells[0].Value.ToString();
+            singale_part_view.part_number_lb.Text = dataGridView_parts.CurrentRow.Cells[1].Value.ToString();
+            singale_part_view.manufacturer_lb.Text = dataGridView_parts.CurrentRow.Cells[2].Value.ToString();
+            singale_part_view.price_lb.Text = dataGridView_parts.CurrentRow.Cells[3].Value.ToString();
+            singale_part_view.warranty_period_lb.Text = dataGridView_parts.CurrentRow.Cells[4].Value.ToString();
+            singale_part_view.stock_quantity_lb.Text = dataGridView_parts.CurrentRow.Cells[5].Value.ToString();
+            singale_part_view.condition_lb.Text = dataGridView_parts.CurrentRow.Cells[6].Value.ToString();
+            singale_part_view.compatibility_lb.Text = dataGridView_parts.CurrentRow.Cells[7].Value.ToString();
+            singale_part_view.part_status_lb.Text = dataGridView_parts.CurrentRow.Cells[8].Value.ToString();
+
+
+            singale_part_view.ShowDialog();
+        }
     }
-}
+    }
+
