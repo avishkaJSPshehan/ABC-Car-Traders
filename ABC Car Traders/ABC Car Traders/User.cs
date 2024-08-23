@@ -22,11 +22,11 @@ namespace ABC_Car_Traders
         string connection_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\ABC_Car_Traders.mdf;Integrated Security=True;Connect Timeout=30";
 
 
-        void bind_car_data()
+        void bind_car_data(string valueToFind)
         {
 
             SqlConnection conn = new SqlConnection(connection_string);
-            SqlCommand comm = new SqlCommand("SELECT * FROM CarDetails", conn);
+            SqlCommand comm = new SqlCommand("SELECT * FROM CarDetails WHERE CONCAT(Make,Modele,Product_Year) LIKE '%"+valueToFind+"%'", conn);
 
             try
             {
@@ -66,17 +66,17 @@ namespace ABC_Car_Traders
         }
 
 
-        void bind_car_part_data()
+        void bind_car_part_data(string partvalueToFind)
         {
 
             SqlConnection conn = new SqlConnection(connection_string);
-            SqlCommand comm = new SqlCommand("SELECT * FROM CarParts", conn);
+            SqlCommand comm = new SqlCommand("SELECT * FROM CarParts WHERE CONCAT(part_name,part_number,manufacturer) LIKE '%" + partvalueToFind + "%'", conn);
 
             try
             {
                 conn.Open();
                 SqlDataReader reader = comm.ExecuteReader();
-                dataGridView_car.Rows.Clear();
+                dataGridView_parts.Rows.Clear();
 
                 while (reader.Read())
                 {
@@ -120,8 +120,9 @@ namespace ABC_Car_Traders
             car_search_box.Visible = true;
             search_car.Visible = true;
             dataGridView_car.Visible = true;
+            dataGridView_order.Visible = false;
 
-            bind_car_data();
+            bind_car_data("");
 
         }
 
@@ -137,7 +138,7 @@ namespace ABC_Car_Traders
             dataGridView_car.Visible = false;
             dataGridView_order.Visible = false;
 
-            bind_car_part_data();
+            bind_car_part_data("");
 
         }
 
@@ -153,7 +154,8 @@ namespace ABC_Car_Traders
             search_car.Visible = true;
             dataGridView_car.Visible = true;
 
-            bind_car_data();
+            bind_car_part_data("");
+            bind_car_data("");
 
         }
 
@@ -167,6 +169,16 @@ namespace ABC_Car_Traders
             dataGridView_car.Visible = false;
 
             dataGridView_order.Visible = true;
+        }
+
+        private void car_search_box_TextChanged(object sender, EventArgs e)
+        {
+            bind_car_data(car_search_box.Text);
+        }
+
+        private void parts_search_box_TextChanged(object sender, EventArgs e)
+        {
+            bind_car_part_data(parts_search_box.Text);
         }
     }
 }
