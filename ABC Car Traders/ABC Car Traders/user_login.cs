@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace ABC_Car_Traders
 {
@@ -38,6 +39,8 @@ namespace ABC_Car_Traders
         {
             SqlConnection conn = new SqlConnection(connection_string);
             conn.Open();
+
+            
 
             string query = "SELECT * from user_details WHERE email = @email and user_password=@password";
 
@@ -75,6 +78,11 @@ namespace ABC_Car_Traders
                     User_form user_form = new User_form();
                     user_form.Show();
                     this.Hide();
+
+                    using (StreamWriter writer = new StreamWriter(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\ABC Car Traders\User_login.txt"))
+                    {
+                        writer.Write(email_textbox.Text);
+                    }
                 }
             }
             else

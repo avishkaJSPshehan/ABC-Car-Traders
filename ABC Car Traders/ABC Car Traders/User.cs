@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace ABC_Car_Traders
 {
@@ -109,6 +110,50 @@ namespace ABC_Car_Traders
 
         }
 
+
+        void bind_order_data(string user_email)
+        {
+
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM Orders WHERE customer_email = '"+user_email+"'", conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+                dataGridView_order.Rows.Clear();
+
+                while (reader.Read())
+                {
+                    // Retrieve each column value
+                    string order_id = reader["order_id"].ToString();
+                    string car_model = reader["car_model"].ToString();
+                    string customer_name = reader["customer_name"].ToString();
+                    string customer_email = reader["customer_email"].ToString();
+                    string customer_phone = reader["customer_phone"].ToString();
+                    string order_date = reader["order_date"].ToString();
+                    string total_amount = reader["total_amount"].ToString();
+                    string payment_status = reader["payment_status"].ToString();
+                    string order_status = reader["order_status"].ToString();
+
+                    // Add the row to the DataGridView
+                    dataGridView_order.Rows.Add(order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
         private void car_details_btn_Click(object sender, EventArgs e)
         {
 
@@ -169,6 +214,20 @@ namespace ABC_Car_Traders
             dataGridView_car.Visible = false;
 
             dataGridView_order.Visible = true;
+
+
+            string user_email = "";
+            using (StreamReader reader = new StreamReader(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\ABC Car Traders\User_login.txt"))
+            {
+                string line;
+                // Read line by line
+                while ((line = reader.ReadLine()) != null)
+                {
+                    user_email = line;
+                }
+            }
+
+            bind_order_data(user_email);
         }
 
         private void car_search_box_TextChanged(object sender, EventArgs e)

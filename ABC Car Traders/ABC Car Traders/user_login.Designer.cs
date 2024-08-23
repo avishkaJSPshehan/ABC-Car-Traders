@@ -180,10 +180,10 @@
         private System.Windows.Forms.Label Login_lb;
         private System.Windows.Forms.TextBox password_textbox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox email_textbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cancle_btn;
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Button user_register_btn;
+        public System.Windows.Forms.TextBox email_textbox;
     }
 }
