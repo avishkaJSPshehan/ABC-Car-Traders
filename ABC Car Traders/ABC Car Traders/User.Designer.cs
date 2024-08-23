@@ -138,6 +138,7 @@
             this.car_search_box.Name = "car_search_box";
             this.car_search_box.Size = new System.Drawing.Size(874, 30);
             this.car_search_box.TabIndex = 15;
+            this.car_search_box.TextChanged += new System.EventHandler(this.car_search_box_TextChanged);
             // 
             // dataGridView_car
             // 
@@ -216,11 +217,12 @@
             this.parts_search_box.BackColor = System.Drawing.Color.WhiteSmoke;
             this.parts_search_box.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.parts_search_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parts_search_box.Location = new System.Drawing.Point(388, 74);
+            this.parts_search_box.Location = new System.Drawing.Point(389, 74);
             this.parts_search_box.Multiline = true;
             this.parts_search_box.Name = "parts_search_box";
             this.parts_search_box.Size = new System.Drawing.Size(874, 30);
             this.parts_search_box.TabIndex = 18;
+            this.parts_search_box.TextChanged += new System.EventHandler(this.parts_search_box_TextChanged);
             // 
             // dataGridView_order
             // 
