@@ -42,9 +42,6 @@
             this.search_car = new System.Windows.Forms.Button();
             this.car_search_box = new System.Windows.Forms.TextBox();
             this.dataGridView_car = new System.Windows.Forms.DataGridView();
-            this.search_parts = new System.Windows.Forms.Button();
-            this.parts_search_box = new System.Windows.Forms.TextBox();
-            this.dataGridView_order = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +52,9 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.search_parts = new System.Windows.Forms.Button();
+            this.parts_search_box = new System.Windows.Forms.TextBox();
+            this.dataGridView_order = new System.Windows.Forms.DataGridView();
             this.dataGridView_parts = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -198,42 +198,7 @@
             this.dataGridView_car.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_car.Size = new System.Drawing.Size(1145, 616);
             this.dataGridView_car.TabIndex = 17;
-            // 
-            // search_parts
-            // 
-            this.search_parts.BackColor = System.Drawing.Color.Crimson;
-            this.search_parts.FlatAppearance.BorderSize = 0;
-            this.search_parts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.search_parts.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_parts.Location = new System.Drawing.Point(1269, 74);
-            this.search_parts.Name = "search_parts";
-            this.search_parts.Size = new System.Drawing.Size(264, 31);
-            this.search_parts.TabIndex = 19;
-            this.search_parts.Text = "Search Parts";
-            this.search_parts.UseVisualStyleBackColor = false;
-            // 
-            // parts_search_box
-            // 
-            this.parts_search_box.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.parts_search_box.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.parts_search_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parts_search_box.Location = new System.Drawing.Point(389, 74);
-            this.parts_search_box.Multiline = true;
-            this.parts_search_box.Name = "parts_search_box";
-            this.parts_search_box.Size = new System.Drawing.Size(874, 30);
-            this.parts_search_box.TabIndex = 18;
-            this.parts_search_box.TextChanged += new System.EventHandler(this.parts_search_box_TextChanged);
-            // 
-            // dataGridView_order
-            // 
-            this.dataGridView_order.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_order.Location = new System.Drawing.Point(387, 307);
-            this.dataGridView_order.Name = "dataGridView_order";
-            this.dataGridView_order.RowTemplate.Height = 24;
-            this.dataGridView_order.Size = new System.Drawing.Size(1145, 444);
-            this.dataGridView_order.TabIndex = 21;
+            this.dataGridView_car.Click += new System.EventHandler(this.dataGridView_car_Click);
             // 
             // Column1
             // 
@@ -305,6 +270,42 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
+            // search_parts
+            // 
+            this.search_parts.BackColor = System.Drawing.Color.Crimson;
+            this.search_parts.FlatAppearance.BorderSize = 0;
+            this.search_parts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_parts.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_parts.Location = new System.Drawing.Point(1269, 74);
+            this.search_parts.Name = "search_parts";
+            this.search_parts.Size = new System.Drawing.Size(264, 31);
+            this.search_parts.TabIndex = 19;
+            this.search_parts.Text = "Search Parts";
+            this.search_parts.UseVisualStyleBackColor = false;
+            // 
+            // parts_search_box
+            // 
+            this.parts_search_box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.parts_search_box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.parts_search_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parts_search_box.Location = new System.Drawing.Point(389, 74);
+            this.parts_search_box.Multiline = true;
+            this.parts_search_box.Name = "parts_search_box";
+            this.parts_search_box.Size = new System.Drawing.Size(874, 30);
+            this.parts_search_box.TabIndex = 18;
+            this.parts_search_box.TextChanged += new System.EventHandler(this.parts_search_box_TextChanged);
+            // 
+            // dataGridView_order
+            // 
+            this.dataGridView_order.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView_order.Location = new System.Drawing.Point(387, 307);
+            this.dataGridView_order.Name = "dataGridView_order";
+            this.dataGridView_order.RowTemplate.Height = 24;
+            this.dataGridView_order.Size = new System.Drawing.Size(1145, 444);
+            this.dataGridView_order.TabIndex = 21;
+            // 
             // dataGridView_parts
             // 
             this.dataGridView_parts.AllowUserToAddRows = false;
@@ -347,7 +348,7 @@
             this.dataGridView_parts.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_parts.EnableHeadersVisualStyles = false;
             this.dataGridView_parts.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_parts.Location = new System.Drawing.Point(388, 135);
+            this.dataGridView_parts.Location = new System.Drawing.Point(388, 227);
             this.dataGridView_parts.Name = "dataGridView_parts";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -360,7 +361,7 @@
             this.dataGridView_parts.RowHeadersVisible = false;
             this.dataGridView_parts.RowTemplate.Height = 24;
             this.dataGridView_parts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 616);
+            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 524);
             this.dataGridView_parts.TabIndex = 22;
             // 
             // dataGridViewTextBoxColumn1
