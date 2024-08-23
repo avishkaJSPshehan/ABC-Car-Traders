@@ -109,6 +109,9 @@ namespace ABC_Car_Traders
                 // Execute the command
                 comm_2.ExecuteNonQuery();
 
+                MessageBox.Show("Order Successfully Added");
+                this.Close();
+
             }
             catch (Exception ex)
             {
