@@ -73,6 +73,36 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car_part_report {
+            get {
+                object obj = ResourceManager.GetObject("car part report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car_report_png {
+            get {
+                object obj = ResourceManager.GetObject("car report png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cosumer_report {
+            get {
+                object obj = ResourceManager.GetObject("cosumer report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_bg {
             get {
                 object obj = ResourceManager.GetObject("home bg", resourceCulture);
@@ -96,6 +126,16 @@ namespace ABC_Car_Traders.Properties {
         internal static System.Drawing.Bitmap login_bg {
             get {
                 object obj = ResourceManager.GetObject("login_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap order_report {
+            get {
+                object obj = ResourceManager.GetObject("order report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

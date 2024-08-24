@@ -176,5 +176,17 @@
   <ItemGroup>
     <None Include="Resources\admin_bg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car report png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car part report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosumer report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order report.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
