@@ -127,8 +127,8 @@
   <data name="home bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_panel_bg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_panel_bg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_panel_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_panel_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +139,16 @@
   <data name="user_home_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_home_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_panel_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_panel_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_panel_bg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_panel_bg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="register_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\register_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_panel_bg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_panel_bg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

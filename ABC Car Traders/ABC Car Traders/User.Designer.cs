@@ -350,7 +350,7 @@
             this.dataGridView_parts.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_parts.EnableHeadersVisualStyles = false;
             this.dataGridView_parts.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_parts.Location = new System.Drawing.Point(388, 135);
+            this.dataGridView_parts.Location = new System.Drawing.Point(388, 282);
             this.dataGridView_parts.Name = "dataGridView_parts";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -363,7 +363,7 @@
             this.dataGridView_parts.RowHeadersVisible = false;
             this.dataGridView_parts.RowTemplate.Height = 24;
             this.dataGridView_parts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 616);
+            this.dataGridView_parts.Size = new System.Drawing.Size(1145, 469);
             this.dataGridView_parts.TabIndex = 22;
             this.dataGridView_parts.Click += new System.EventHandler(this.dataGridView_parts_Click);
             // 
@@ -472,7 +472,7 @@
             this.dataGridView_order.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView_order.EnableHeadersVisualStyles = false;
             this.dataGridView_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView_order.Location = new System.Drawing.Point(387, 135);
+            this.dataGridView_order.Location = new System.Drawing.Point(387, 345);
             this.dataGridView_order.Name = "dataGridView_order";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -485,7 +485,7 @@
             this.dataGridView_order.RowHeadersVisible = false;
             this.dataGridView_order.RowTemplate.Height = 24;
             this.dataGridView_order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_order.Size = new System.Drawing.Size(1145, 616);
+            this.dataGridView_order.Size = new System.Drawing.Size(1145, 406);
             this.dataGridView_order.TabIndex = 23;
             this.dataGridView_order.Click += new System.EventHandler(this.dataGridView_order_Click);
             // 
