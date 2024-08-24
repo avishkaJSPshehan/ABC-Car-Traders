@@ -29,6 +29,9 @@ namespace ABC_Car_Traders
 
         private void login_btn_Click(object sender, EventArgs e)
         {
+
+
+
             string user_email = "";
             string first_name = "";
             string last_name = "";
@@ -77,13 +80,43 @@ namespace ABC_Car_Traders
             string part_name = modele_lb.Text.ToString().Trim();
 
 
+
+
             try
             {
+                string imagePath = "";
+
+                Single_Product singale_product_view = new Single_Product();
+
+                SqlCommand comm_3 = new SqlCommand("SELECT * FROM CarDetails WHERE Modele = '" + part_name + "'", conn);
+
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = comm_3.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        imagePath = reader["Car_Image"].ToString();
+
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
 
                 conn.Open();
 
-                string query = "INSERT INTO Orders (order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status) " +
-                "VALUES (@order_id, @car_model, @customer_name, @customer_email, @customer_phone, @order_date, @total_amount, @payment_status, @order_status)";
+                string query = "INSERT INTO Orders (order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status,item_image) " +
+                "VALUES (@order_id, @car_model, @customer_name, @customer_email, @customer_phone, @order_date, @total_amount, @payment_status, @order_status,@image)";
 
                 SqlCommand comm_2 = new SqlCommand(query, conn);
 
@@ -105,6 +138,7 @@ namespace ABC_Car_Traders
                 comm_2.Parameters.AddWithValue("@total_amount", price_lb.Text);
                 comm_2.Parameters.AddWithValue("@payment_status", "cash");
                 comm_2.Parameters.AddWithValue("@order_status", "Processing");
+                comm_2.Parameters.AddWithValue("@image", imagePath);
 
                 // Execute the command
                 comm_2.ExecuteNonQuery();
