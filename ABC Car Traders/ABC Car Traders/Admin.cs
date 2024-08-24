@@ -214,6 +214,7 @@ namespace ABC_Car_Traders
             manage_part_details_panel.Visible = false;
             manage_customer_details_panel.Visible = false;
             manage_customer_order_panel.Visible = false;
+            report_panel.Visible = false;
 
             manage_car_details_panel.Visible = true;
             bind_car_data("");
@@ -237,6 +238,7 @@ namespace ABC_Car_Traders
             manage_part_details_panel.Visible = false;
             manage_car_details_panel.Visible = false;
             manage_customer_order_panel.Visible = false;
+            report_panel.Visible = false; ;
 
             manage_customer_details_panel.Visible = true;
             bind_user_data("");
@@ -247,9 +249,20 @@ namespace ABC_Car_Traders
             manage_part_details_panel.Visible = false;
             manage_car_details_panel.Visible = false;
             manage_customer_details_panel.Visible = false;
+            report_panel.Visible = false;
 
             manage_customer_order_panel.Visible = true;
             bind_order_data("");
+        }
+
+        private void generate_reports_btn_Click(object sender, EventArgs e)
+        {
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+
+            report_panel.Visible = true;
         }
     }
 }
