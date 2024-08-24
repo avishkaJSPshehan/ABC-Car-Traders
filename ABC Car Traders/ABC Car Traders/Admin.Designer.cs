@@ -117,7 +117,7 @@
             this.engine_type_textBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.transmission_textBox = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.status_comboBox = new System.Windows.Forms.ComboBox();
             this.color_textBox = new System.Windows.Forms.TextBox();
             this.insert_car_btn = new System.Windows.Forms.Button();
             this.condition_textBox = new System.Windows.Forms.TextBox();
@@ -128,7 +128,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.dataGridView1_admin_user = new System.Windows.Forms.DataGridView();
+            this.dataGridView_admin_user = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -149,16 +149,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.car_or_part_pictureBox = new System.Windows.Forms.PictureBox();
-            this.dataGridView1_admin_order = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_admin_order = new System.Windows.Forms.DataGridView();
             this.label28 = new System.Windows.Forms.Label();
             this.order_id_textBox = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -184,6 +175,16 @@
             this.manage_customer_report_btn = new System.Windows.Forms.Button();
             this.generate_part_report_btn = new System.Windows.Forms.Button();
             this.generate_car_report_btn = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manage_part_details_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_parts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.part_pictureBox)).BeginInit();
@@ -191,10 +192,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_car)).BeginInit();
             this.manage_customer_details_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_admin_user)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_user)).BeginInit();
             this.manage_customer_order_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.car_or_part_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_admin_order)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_order)).BeginInit();
             this.report_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -364,6 +365,7 @@
             this.dataGridView_admin_parts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_admin_parts.Size = new System.Drawing.Size(1018, 313);
             this.dataGridView_admin_parts.TabIndex = 48;
+            this.dataGridView_admin_parts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_admin_parts_CellClick);
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -728,7 +730,7 @@
             this.manage_car_details_panel.Controls.Add(this.engine_type_textBox);
             this.manage_car_details_panel.Controls.Add(this.label4);
             this.manage_car_details_panel.Controls.Add(this.transmission_textBox);
-            this.manage_car_details_panel.Controls.Add(this.comboBox1);
+            this.manage_car_details_panel.Controls.Add(this.status_comboBox);
             this.manage_car_details_panel.Controls.Add(this.color_textBox);
             this.manage_car_details_panel.Controls.Add(this.insert_car_btn);
             this.manage_car_details_panel.Controls.Add(this.condition_textBox);
@@ -853,6 +855,8 @@
             this.dataGridView_admin_car.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_admin_car.Size = new System.Drawing.Size(1018, 263);
             this.dataGridView_admin_car.TabIndex = 48;
+            this.dataGridView_admin_car.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_admin_car_CellClick);
+            this.dataGridView_admin_car.Click += new System.EventHandler(this.dataGridView_admin_car_Click);
             // 
             // Column1
             // 
@@ -1085,16 +1089,16 @@
             this.transmission_textBox.Size = new System.Drawing.Size(248, 30);
             this.transmission_textBox.TabIndex = 55;
             // 
-            // comboBox1
+            // status_comboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.status_comboBox.FormattingEnabled = true;
+            this.status_comboBox.Items.AddRange(new object[] {
             "Avilable",
             "Not Avilable"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 281);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(793, 24);
-            this.comboBox1.TabIndex = 63;
+            this.status_comboBox.Location = new System.Drawing.Point(13, 281);
+            this.status_comboBox.Name = "status_comboBox";
+            this.status_comboBox.Size = new System.Drawing.Size(793, 24);
+            this.status_comboBox.TabIndex = 63;
             // 
             // color_textBox
             // 
@@ -1176,7 +1180,7 @@
             this.manage_customer_details_panel.Controls.Add(this.label15);
             this.manage_customer_details_panel.Controls.Add(this.label23);
             this.manage_customer_details_panel.Controls.Add(this.label24);
-            this.manage_customer_details_panel.Controls.Add(this.dataGridView1_admin_user);
+            this.manage_customer_details_panel.Controls.Add(this.dataGridView_admin_user);
             this.manage_customer_details_panel.Controls.Add(this.fname_textBox);
             this.manage_customer_details_panel.Controls.Add(this.lname_textBox);
             this.manage_customer_details_panel.Controls.Add(this.email_textBox);
@@ -1225,19 +1229,19 @@
             this.label24.TabIndex = 88;
             this.label24.Text = "First Name";
             // 
-            // dataGridView1_admin_user
+            // dataGridView_admin_user
             // 
-            this.dataGridView1_admin_user.AllowUserToAddRows = false;
-            this.dataGridView1_admin_user.AllowUserToDeleteRows = false;
-            this.dataGridView1_admin_user.AllowUserToResizeColumns = false;
-            this.dataGridView1_admin_user.AllowUserToResizeRows = false;
+            this.dataGridView_admin_user.AllowUserToAddRows = false;
+            this.dataGridView_admin_user.AllowUserToDeleteRows = false;
+            this.dataGridView_admin_user.AllowUserToResizeColumns = false;
+            this.dataGridView_admin_user.AllowUserToResizeRows = false;
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1_admin_user.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView1_admin_user.BackgroundColor = System.Drawing.Color.Gray;
-            this.dataGridView1_admin_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1_admin_user.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_admin_user.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView_admin_user.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView_admin_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_admin_user.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1245,9 +1249,9 @@
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1_admin_user.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView1_admin_user.ColumnHeadersHeight = 40;
-            this.dataGridView1_admin_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_admin_user.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView_admin_user.ColumnHeadersHeight = 40;
+            this.dataGridView_admin_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -1260,11 +1264,11 @@
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1_admin_user.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView1_admin_user.EnableHeadersVisualStyles = false;
-            this.dataGridView1_admin_user.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1_admin_user.Location = new System.Drawing.Point(13, 261);
-            this.dataGridView1_admin_user.Name = "dataGridView1_admin_user";
+            this.dataGridView_admin_user.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView_admin_user.EnableHeadersVisualStyles = false;
+            this.dataGridView_admin_user.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView_admin_user.Location = new System.Drawing.Point(13, 261);
+            this.dataGridView_admin_user.Name = "dataGridView_admin_user";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1272,12 +1276,13 @@
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1_admin_user.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView1_admin_user.RowHeadersVisible = false;
-            this.dataGridView1_admin_user.RowTemplate.Height = 24;
-            this.dataGridView1_admin_user.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1_admin_user.Size = new System.Drawing.Size(1018, 315);
-            this.dataGridView1_admin_user.TabIndex = 74;
+            this.dataGridView_admin_user.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView_admin_user.RowHeadersVisible = false;
+            this.dataGridView_admin_user.RowTemplate.Height = 24;
+            this.dataGridView_admin_user.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_admin_user.Size = new System.Drawing.Size(1018, 315);
+            this.dataGridView_admin_user.TabIndex = 74;
+            this.dataGridView_admin_user.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_admin_user_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1435,7 +1440,7 @@
             this.manage_customer_order_panel.Controls.Add(this.label26);
             this.manage_customer_order_panel.Controls.Add(this.label27);
             this.manage_customer_order_panel.Controls.Add(this.car_or_part_pictureBox);
-            this.manage_customer_order_panel.Controls.Add(this.dataGridView1_admin_order);
+            this.manage_customer_order_panel.Controls.Add(this.dataGridView_admin_order);
             this.manage_customer_order_panel.Controls.Add(this.label28);
             this.manage_customer_order_panel.Controls.Add(this.order_id_textBox);
             this.manage_customer_order_panel.Controls.Add(this.label32);
@@ -1504,19 +1509,19 @@
             this.car_or_part_pictureBox.TabIndex = 84;
             this.car_or_part_pictureBox.TabStop = false;
             // 
-            // dataGridView1_admin_order
+            // dataGridView_admin_order
             // 
-            this.dataGridView1_admin_order.AllowUserToAddRows = false;
-            this.dataGridView1_admin_order.AllowUserToDeleteRows = false;
-            this.dataGridView1_admin_order.AllowUserToResizeColumns = false;
-            this.dataGridView1_admin_order.AllowUserToResizeRows = false;
+            this.dataGridView_admin_order.AllowUserToAddRows = false;
+            this.dataGridView_admin_order.AllowUserToDeleteRows = false;
+            this.dataGridView_admin_order.AllowUserToResizeColumns = false;
+            this.dataGridView_admin_order.AllowUserToResizeRows = false;
             dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1_admin_order.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridView1_admin_order.BackgroundColor = System.Drawing.Color.Gray;
-            this.dataGridView1_admin_order.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1_admin_order.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_admin_order.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView_admin_order.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView_admin_order.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_admin_order.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1524,9 +1529,9 @@
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1_admin_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView1_admin_order.ColumnHeadersHeight = 40;
-            this.dataGridView1_admin_order.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_admin_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView_admin_order.ColumnHeadersHeight = 40;
+            this.dataGridView_admin_order.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
@@ -1535,7 +1540,8 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23});
+            this.dataGridViewTextBoxColumn23,
+            this.Column13});
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1543,11 +1549,11 @@
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1_admin_order.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridView1_admin_order.EnableHeadersVisualStyles = false;
-            this.dataGridView1_admin_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1_admin_order.Location = new System.Drawing.Point(13, 256);
-            this.dataGridView1_admin_order.Name = "dataGridView1_admin_order";
+            this.dataGridView_admin_order.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView_admin_order.EnableHeadersVisualStyles = false;
+            this.dataGridView_admin_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView_admin_order.Location = new System.Drawing.Point(13, 256);
+            this.dataGridView_admin_order.Name = "dataGridView_admin_order";
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1555,75 +1561,13 @@
             dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1_admin_order.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridView1_admin_order.RowHeadersVisible = false;
-            this.dataGridView1_admin_order.RowTemplate.Height = 24;
-            this.dataGridView1_admin_order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1_admin_order.Size = new System.Drawing.Size(1018, 318);
-            this.dataGridView1_admin_order.TabIndex = 74;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Order ID";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Car/Part Model";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Customer Name";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Customer Email";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Customer Phone";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Order Date";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn21.HeaderText = "Total Amount";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn22.HeaderText = "Payment Status";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn23.HeaderText = "Order Status";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridView_admin_order.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView_admin_order.RowHeadersVisible = false;
+            this.dataGridView_admin_order.RowTemplate.Height = 24;
+            this.dataGridView_admin_order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_admin_order.Size = new System.Drawing.Size(1018, 318);
+            this.dataGridView_admin_order.TabIndex = 74;
+            this.dataGridView_admin_order.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_admin_order_CellClick);
             // 
             // label28
             // 
@@ -1909,6 +1853,75 @@
             this.generate_car_report_btn.TabIndex = 0;
             this.generate_car_report_btn.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Order ID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Car/Part Model";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Customer Name";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Customer Email";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Customer Phone";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Order Date";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn21.HeaderText = "Total Amount";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn22.HeaderText = "Payment Status";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn23.HeaderText = "Order Status";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Image";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
             // Admin_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1916,16 +1929,16 @@
             this.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.admin_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1555, 779);
-            this.Controls.Add(this.report_panel);
-            this.Controls.Add(this.manage_car_details_panel);
             this.Controls.Add(this.generate_reports_btn);
             this.Controls.Add(this.manage_customer_order_details_btn);
             this.Controls.Add(this.manage_customer_details_btn);
             this.Controls.Add(this.manage_Car_parts_details_btn);
             this.Controls.Add(this.manage_car_details_btn);
+            this.Controls.Add(this.manage_customer_order_panel);
+            this.Controls.Add(this.report_panel);
+            this.Controls.Add(this.manage_car_details_panel);
             this.Controls.Add(this.manage_part_details_panel);
             this.Controls.Add(this.manage_customer_details_panel);
-            this.Controls.Add(this.manage_customer_order_panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_form";
@@ -1942,11 +1955,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_car)).EndInit();
             this.manage_customer_details_panel.ResumeLayout(false);
             this.manage_customer_details_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_admin_user)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_user)).EndInit();
             this.manage_customer_order_panel.ResumeLayout(false);
             this.manage_customer_order_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.car_or_part_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_admin_order)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_order)).EndInit();
             this.report_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2027,7 +2040,7 @@
         private System.Windows.Forms.TextBox engine_type_textBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox transmission_textBox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox status_comboBox;
         private System.Windows.Forms.TextBox color_textBox;
         private System.Windows.Forms.Button insert_car_btn;
         private System.Windows.Forms.TextBox condition_textBox;
@@ -2038,7 +2051,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DataGridView dataGridView1_admin_user;
+        private System.Windows.Forms.DataGridView dataGridView_admin_user;
         private System.Windows.Forms.TextBox fname_textBox;
         private System.Windows.Forms.TextBox lname_textBox;
         private System.Windows.Forms.TextBox email_textBox;
@@ -2059,7 +2072,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.PictureBox car_or_part_pictureBox;
-        private System.Windows.Forms.DataGridView dataGridView1_admin_order;
+        private System.Windows.Forms.DataGridView dataGridView_admin_order;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox order_id_textBox;
         private System.Windows.Forms.Label label32;
@@ -2080,6 +2093,11 @@
         private System.Windows.Forms.Button update_order_btn;
         private System.Windows.Forms.Button upload_image;
         private System.Windows.Forms.Button delete_order;
+        private System.Windows.Forms.Panel report_panel;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button manage_customer_report_btn;
+        private System.Windows.Forms.Button generate_part_report_btn;
+        private System.Windows.Forms.Button generate_car_report_btn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -2089,10 +2107,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.Panel report_panel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button manage_customer_report_btn;
-        private System.Windows.Forms.Button generate_part_report_btn;
-        private System.Windows.Forms.Button generate_car_report_btn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
     }
 }

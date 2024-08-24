@@ -126,7 +126,7 @@ namespace ABC_Car_Traders
             {
                 conn.Open();
                 SqlDataReader reader = comm.ExecuteReader();
-                dataGridView1_admin_user.Rows.Clear();
+                dataGridView_admin_user.Rows.Clear();
 
                 while (reader.Read())
                 {
@@ -139,7 +139,7 @@ namespace ABC_Car_Traders
 
 
                     // Add the row to the DataGridView
-                    dataGridView1_admin_user.Rows.Add(first_name, last_name, mobile_no, email, user_state);
+                    dataGridView_admin_user.Rows.Add(first_name, last_name, mobile_no, email, user_state);
                 }
 
                 reader.Close();
@@ -166,7 +166,7 @@ namespace ABC_Car_Traders
             {
                 conn.Open();
                 SqlDataReader reader = comm.ExecuteReader();
-                dataGridView1_admin_order.Rows.Clear();
+                dataGridView_admin_order.Rows.Clear();
 
                 while (reader.Read())
                 {
@@ -180,11 +180,12 @@ namespace ABC_Car_Traders
                     string total_amount = reader["total_amount"].ToString();
                     string payment_status = reader["payment_status"].ToString();
                     string order_status = reader["order_status"].ToString();
+                    string item_image = reader["item_image"].ToString();
 
 
 
                     // Add the row to the DataGridView
-                    dataGridView1_admin_order.Rows.Add(order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status);
+                    dataGridView_admin_order.Rows.Add(order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status, item_image);
                 }
 
                 reader.Close();
@@ -264,5 +265,94 @@ namespace ABC_Car_Traders
 
             report_panel.Visible = true;
         }
+
+        private void dataGridView_admin_car_Click(object sender, EventArgs e)
+        {
+
+
+            
+
+
+        }
+
+        private void dataGridView_admin_car_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridView_admin_car.Rows[e.RowIndex];
+
+                company_textbox.Text = row.Cells[0].Value.ToString();
+                modele_textBox.Text = row.Cells[1].Value.ToString();
+                product_year_textBox.Text = row.Cells[2].Value.ToString();
+                salling_price_textBox.Text = row.Cells[3].Value.ToString();
+                mileage_textBox.Text = row.Cells[4].Value.ToString();
+                engine_type_textBox.Text = row.Cells[5].Value.ToString();
+                transmission_textBox.Text = row.Cells[6].Value.ToString();
+                color_textBox.Text = row.Cells[7].Value.ToString();
+                condition_textBox.Text = row.Cells[8].Value.ToString();
+                status_comboBox.Text = row.Cells[9].Value.ToString();
+
+                car_pictureBox.Image = Image.FromFile(row.Cells[10].Value.ToString());
+            }
+        }
+
+        private void dataGridView_admin_parts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridView_admin_parts.Rows[e.RowIndex];
+
+                part_name_textBox.Text = row.Cells[0].Value.ToString();
+                part_number_textBox.Text = row.Cells[1].Value.ToString();
+                manufacturer_textBox.Text = row.Cells[2].Value.ToString();
+                price_textBox.Text = row.Cells[3].Value.ToString();
+                warranty_textBox.Text = row.Cells[4].Value.ToString();
+                qty_textBox.Text = row.Cells[5].Value.ToString();
+                part_condition_textBox.Text = row.Cells[6].Value.ToString();
+                compatibility_textBox.Text = row.Cells[7].Value.ToString();
+                stutes_textBox.Text = row.Cells[8].Value.ToString();
+
+
+                part_pictureBox.Image = Image.FromFile(row.Cells[9].Value.ToString());
+            }
+        }
+
+        private void dataGridView_admin_user_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridView_admin_user.Rows[e.RowIndex];
+
+                fname_textBox.Text = row.Cells[0].Value.ToString();
+                lname_textBox.Text = row.Cells[1].Value.ToString();
+                mobile_textBox.Text = row.Cells[2].Value.ToString();
+                user_state_textBox.Text = row.Cells[4].Value.ToString();
+                email_textBox.Text = row.Cells[3].Value.ToString();
+
+            }
+        }
+
+        private void dataGridView_admin_order_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridView_admin_order.Rows[e.RowIndex];
+
+                order_id_textBox.Text = row.Cells[0].Value.ToString();
+                car_model_textBox.Text = row.Cells[1].Value.ToString();
+                customer_name_textBox.Text = row.Cells[2].Value.ToString();
+                customer_email_textBox.Text = row.Cells[3].Value.ToString();
+                customer_phone_textBox.Text = row.Cells[4].Value.ToString();
+                order_date_textBox.Text = row.Cells[5].Value.ToString();
+                total_amount_textBox.Text = row.Cells[6].Value.ToString();
+                payment_status_textBox.Text = row.Cells[7].Value.ToString();
+                order_status_textBox.Text = row.Cells[8].Value.ToString();
+
+
+                car_or_part_pictureBox.Image = Image.FromFile(row.Cells[9].Value.ToString());
+            }
+        }
     }
 }
+

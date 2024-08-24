@@ -288,7 +288,7 @@ namespace ABC_Car_Traders
             singale_product_view.ShowDialog();
         }
 
-        private void dataGridView_parts_Click(object sender, EventArgs e)
+        void dataGridView_parts_Click(object sender, EventArgs e)
         {
             string partimagePath = "";
 

@@ -80,10 +80,38 @@ namespace ABC_Car_Traders
             try
             {
 
+                string partimagePath = "";
+
+
+                SqlCommand comm_3 = new SqlCommand("SELECT * FROM CarParts WHERE part_name = '" + part_name + "'", conn);
+
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = comm_3.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        partimagePath = reader["part_image"].ToString();
+
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
                 conn.Open();
 
-                string query = "INSERT INTO Orders (order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status) " +
-                "VALUES (@order_id, @car_model, @customer_name, @customer_email, @customer_phone, @order_date, @total_amount, @payment_status, @order_status)";
+                string query = "INSERT INTO Orders (order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status,item_image) " +
+                "VALUES (@order_id, @car_model, @customer_name, @customer_email, @customer_phone, @order_date, @total_amount, @payment_status, @order_status,@image)";
 
                 SqlCommand comm_2 = new SqlCommand(query, conn);
 
@@ -104,7 +132,8 @@ namespace ABC_Car_Traders
                 comm_2.Parameters.AddWithValue("@order_date", onlyDate);  
                 comm_2.Parameters.AddWithValue("@total_amount", price_lb.Text);
                 comm_2.Parameters.AddWithValue("@payment_status", "cash");
-                comm_2.Parameters.AddWithValue("@order_status", "Processing");
+                comm_2.Parameters.AddWithValue("@order_status", "Processing"); 
+                comm_2.Parameters.AddWithValue("@image", partimagePath);
 
                 // Execute the command
                 comm_2.ExecuteNonQuery();
