@@ -487,6 +487,7 @@
             this.dataGridView_order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_order.Size = new System.Drawing.Size(1145, 616);
             this.dataGridView_order.TabIndex = 23;
+            this.dataGridView_order.Click += new System.EventHandler(this.dataGridView_order_Click);
             // 
             // dataGridViewTextBoxColumn10
             // 

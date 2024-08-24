@@ -335,6 +335,78 @@ namespace ABC_Car_Traders
 
             singale_part_view.ShowDialog();
         }
+
+        private void dataGridView_order_Click(object sender, EventArgs e)
+        {
+            string partimagePath = "";
+            string carimagePath = "";
+
+            Order_Details order_details = new Order_Details();
+
+            SqlConnection conn = new SqlConnection(connection_string);
+            SqlCommand comm = new SqlCommand("SELECT * FROM CarParts WHERE part_name = '" + dataGridView_order.CurrentRow.Cells[1].Value.ToString() + "'", conn);
+            SqlCommand comm_2 = new SqlCommand("SELECT * FROM CarDetails WHERE Modele = '" + dataGridView_order.CurrentRow.Cells[1].Value.ToString() + "'", conn);
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    partimagePath = reader["part_image"].ToString();
+
+                }
+
+                reader.Close();
+
+                SqlDataReader reader_2 = comm_2.ExecuteReader();
+
+
+                while (reader_2.Read())
+                {
+                    carimagePath = reader_2["Car_Image"].ToString();
+
+                }
+
+                reader_2.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            string imagePath = "";
+
+            if(carimagePath != "" && partimagePath == "")
+            {
+                imagePath = carimagePath;
+            }
+            else
+            {
+                imagePath = partimagePath;
+            }
+
+            order_details.part_image.Image = Image.FromFile(imagePath);
+
+            order_details.order_id_lb.Text = dataGridView_order.CurrentRow.Cells[0].Value.ToString();
+            order_details.model_lb.Text = dataGridView_order.CurrentRow.Cells[1].Value.ToString();
+            order_details.customer_name_lb.Text = dataGridView_order.CurrentRow.Cells[2].Value.ToString();
+            order_details.customer_email_lb.Text = dataGridView_order.CurrentRow.Cells[3].Value.ToString();
+            order_details.customer_phone_lb.Text = dataGridView_order.CurrentRow.Cells[4].Value.ToString();
+            order_details.order_date_lb.Text = dataGridView_order.CurrentRow.Cells[5].Value.ToString();
+            order_details.total_amount_lb.Text = dataGridView_order.CurrentRow.Cells[6].Value.ToString();
+            order_details.payment_status_lb.Text = dataGridView_order.CurrentRow.Cells[7].Value.ToString();
+            order_details.order_status_lb.Text = dataGridView_order.CurrentRow.Cells[8].Value.ToString();
+
+
+            order_details.ShowDialog();
+        }
     }
     }
 
