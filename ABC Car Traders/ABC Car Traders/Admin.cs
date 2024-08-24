@@ -353,6 +353,210 @@ namespace ABC_Car_Traders
                 car_or_part_pictureBox.Image = Image.FromFile(row.Cells[9].Value.ToString());
             }
         }
+
+        public String imagePath;
+        private void image_upload_btn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Image Files (*.jpg; *.png)|*.jpg;*.png";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    imagePath = dialog.FileName;
+                    car_pictureBox.ImageLocation = imagePath;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void part_image_upload_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Image Files (*.jpg; *.png)|*.jpg;*.png";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    imagePath = dialog.FileName;
+                    part_pictureBox.ImageLocation = imagePath;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void upload_image_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Image Files (*.jpg; *.png)|*.jpg;*.png";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    imagePath = dialog.FileName;
+                    car_or_part_pictureBox.ImageLocation = imagePath;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void insert_car_btn_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+
+                conn.Open();
+
+                string query = "INSERT INTO CarDetails (Make, Modele, Product_Year, Price, Mileage, Engine_type, Transmission, Color, Condition,Status,Car_Image) " +
+                "VALUES (@Make, @Modele, @Product_Year, @Price, @Mileage, @Engine_type, @Transmission, @Color, @Condition,@Status,@Car_Image)";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                string path = Path.Combine(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\Assets\car image\" +
+                            company_textbox.Text + modele_textBox.Text.Trim() + ".jpg");
+
+                string directoryPath = Path.GetDirectoryName(path);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.Copy(car_pictureBox.ImageLocation, path, true);
+
+                // Add parameters to prevent SQL injection
+                comm_2.Parameters.AddWithValue("@Make", company_textbox.Text);
+                comm_2.Parameters.AddWithValue("@Modele", modele_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Product_Year", product_year_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Price", salling_price_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Mileage", mileage_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Engine_type", engine_type_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Transmission", transmission_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Color", color_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Condition", condition_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Status", status_comboBox.Text);
+                comm_2.Parameters.AddWithValue("@Car_Image", path);
+
+                // Execute the command
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Car Details Successfully Added");
+                bind_car_data("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void update_car_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+
+                conn.Open();
+
+                string query = "UPDATE CarDetails SET Make = @Make, Modele = @Modele, Product_Year = @Product_Year, Price = @Price, Mileage = @Mileage, Engine_type = @Engine_type, Transmission = @Transmission, Color = @Color, Condition = @Condition, Status = @Status, Car_Image = @Car_Image WHERE Modele = @Modele AND Make = @Make";
+
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                string path = Path.Combine(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\Assets\car image\" +
+                            company_textbox.Text + modele_textBox.Text.Trim() + ".jpg");
+
+                string directoryPath = Path.GetDirectoryName(path);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.Copy(car_pictureBox.ImageLocation, path, true);
+
+                // Add parameters to prevent SQL injection
+                comm_2.Parameters.AddWithValue("@Make", company_textbox.Text);
+                comm_2.Parameters.AddWithValue("@Modele", modele_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Product_Year", product_year_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Price", salling_price_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Mileage", mileage_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Engine_type", engine_type_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Transmission", transmission_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Color", color_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Condition", condition_textBox.Text);
+                comm_2.Parameters.AddWithValue("@Status", status_comboBox.Text);
+                comm_2.Parameters.AddWithValue("@Car_Image", path);
+
+                // Execute the command
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Car Details Successfully Updated");
+                bind_car_data("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void delete_car_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+                string query = "DELETE FROM CarDetails WHERE Modele = @Modele AND Make = @Make";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                comm_2.Parameters.AddWithValue("@Make", company_textbox.Text);
+                comm_2.Parameters.AddWithValue("@Modele", modele_textBox.Text);
+
+                int rowsAffected = comm_2.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Car Details Successfully Deleted");
+                    bind_car_data("");
+                }
+                else
+                {
+                    MessageBox.Show("No matching car details found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
     }
 }
 
