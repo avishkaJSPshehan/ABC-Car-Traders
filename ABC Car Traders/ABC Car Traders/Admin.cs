@@ -703,6 +703,78 @@ namespace ABC_Car_Traders
             }
 
         }
+
+        private void update_user_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+
+
+                string query = "UPDATE user_details SET first_name = @first_name, last_name = @last_name, mobile_no = @mobile_no, email = @email, user_state = @user_state WHERE email = @email";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+
+
+                comm_2.Parameters.AddWithValue("@first_name", fname_textBox.Text);
+                comm_2.Parameters.AddWithValue("@last_name", lname_textBox.Text); 
+                comm_2.Parameters.AddWithValue("@mobile_no", mobile_textBox.Text);
+                comm_2.Parameters.AddWithValue("@email", email_textBox.Text);
+                comm_2.Parameters.AddWithValue("@user_state", user_state_textBox.Text);
+
+
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Customer Details Successfully Updated");
+                bind_user_data("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void delete_user_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+
+                string query = "DELETE FROM user_details WHERE email = @email";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                comm_2.Parameters.AddWithValue("@email", email_textBox.Text);
+
+                int rowsAffected = comm_2.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("User Details Successfully Deleted");
+                    bind_user_data(""); 
+                }
+                else
+                {
+                    MessageBox.Show("No matching user found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
     }
 }
 
