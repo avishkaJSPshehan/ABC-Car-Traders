@@ -557,6 +557,152 @@ namespace ABC_Car_Traders
             }
 
         }
+
+        private void part_inser_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+
+                conn.Open();
+
+                string query = "INSERT INTO CarParts (part_name, part_number, manufacturer, price, warranty_period, stock_quantity, condition, compatibility, part_status,part_image) " +
+                "VALUES (@part_name, @part_number, @manufacturer, @price, @warranty_period, @stock_quantity, @condition, @compatibility,@part_status,@part_image)";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                string path = Path.Combine(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\Assets\part image\" +
+                            part_name_textBox.Text + manufacturer_textBox.Text.Trim() + ".jpg");
+
+                string directoryPath = Path.GetDirectoryName(path);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.Copy(part_pictureBox.ImageLocation, path, true);
+
+                // Add parameters to prevent SQL injection
+                comm_2.Parameters.AddWithValue("@part_name", part_name_textBox.Text);
+                comm_2.Parameters.AddWithValue("@part_number", part_number_textBox.Text);
+                comm_2.Parameters.AddWithValue("@manufacturer", manufacturer_textBox.Text);
+                comm_2.Parameters.AddWithValue("@price", price_textBox.Text);
+                comm_2.Parameters.AddWithValue("@warranty_period", warranty_textBox.Text);
+                comm_2.Parameters.AddWithValue("@stock_quantity", qty_textBox.Text);
+                comm_2.Parameters.AddWithValue("@condition", part_condition_textBox.Text);
+                comm_2.Parameters.AddWithValue("@compatibility", compatibility_textBox.Text);
+                comm_2.Parameters.AddWithValue("@part_status", stutes_textBox.Text);
+                comm_2.Parameters.AddWithValue("@part_image", path);
+
+                // Execute the command
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Car Part Details Successfully Added");
+                bind_car_part_data("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void update_part_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+
+                // UPDATE query to update car part details based on part number and manufacturer
+                string query = "UPDATE CarParts SET part_name = @part_name, price = @price, warranty_period = @warranty_period, stock_quantity = @stock_quantity, condition = @condition, compatibility = @compatibility, part_status = @part_status, part_image = @part_image WHERE part_number = @part_number AND manufacturer = @manufacturer";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                string path = Path.Combine(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\Assets\part image\" +
+                            part_name_textBox.Text + manufacturer_textBox.Text.Trim() + ".jpg");
+
+                string directoryPath = Path.GetDirectoryName(path);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.Copy(part_pictureBox.ImageLocation, path, true);
+
+                // Add parameters to prevent SQL injection
+                comm_2.Parameters.AddWithValue("@part_name", part_name_textBox.Text);
+                comm_2.Parameters.AddWithValue("@part_number", part_number_textBox.Text); // part_number is the identifier
+                comm_2.Parameters.AddWithValue("@manufacturer", manufacturer_textBox.Text); // manufacturer is another identifier
+                comm_2.Parameters.AddWithValue("@price", price_textBox.Text);
+                comm_2.Parameters.AddWithValue("@warranty_period", warranty_textBox.Text);
+                comm_2.Parameters.AddWithValue("@stock_quantity", qty_textBox.Text);
+                comm_2.Parameters.AddWithValue("@condition", part_condition_textBox.Text);
+                comm_2.Parameters.AddWithValue("@compatibility", compatibility_textBox.Text);
+                comm_2.Parameters.AddWithValue("@part_status", stutes_textBox.Text);
+                comm_2.Parameters.AddWithValue("@part_image", path);
+
+                // Execute the command
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Car Part Details Successfully Updated");
+                bind_car_part_data("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void delete_part_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+
+                // DELETE query to remove car part details based on part number and manufacturer
+                string query = "DELETE FROM CarParts WHERE part_number = @part_number AND manufacturer = @manufacturer";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                // Add parameters to prevent SQL injection
+                comm_2.Parameters.AddWithValue("@part_number", part_number_textBox.Text); // part_number is the identifier
+                comm_2.Parameters.AddWithValue("@manufacturer", manufacturer_textBox.Text); // manufacturer is another identifier
+
+                // Execute the DELETE command
+                int rowsAffected = comm_2.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Car Part Details Successfully Deleted");
+                    bind_car_part_data(""); // Refresh data after deletion
+                }
+                else
+                {
+                    MessageBox.Show("No matching car part details found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
     }
 }
 
