@@ -216,6 +216,11 @@ namespace ABC_Car_Traders
             manage_customer_details_panel.Visible = false;
             manage_customer_order_panel.Visible = false;
             report_panel.Visible = false;
+            car_report_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
 
             manage_car_details_panel.Visible = true;
             bind_car_data("");
@@ -228,6 +233,11 @@ namespace ABC_Car_Traders
             manage_car_details_panel.Visible = false;
             manage_customer_details_panel.Visible = false;
             manage_customer_order_panel.Visible = false;
+            car_report_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
 
             manage_part_details_panel.Visible = true;
             
@@ -238,8 +248,13 @@ namespace ABC_Car_Traders
         {
             manage_part_details_panel.Visible = false;
             manage_car_details_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
             manage_customer_order_panel.Visible = false;
-            report_panel.Visible = false; ;
+            report_panel.Visible = false;
+            car_report_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
 
             manage_customer_details_panel.Visible = true;
             bind_user_data("");
@@ -250,7 +265,12 @@ namespace ABC_Car_Traders
             manage_part_details_panel.Visible = false;
             manage_car_details_panel.Visible = false;
             manage_customer_details_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
             report_panel.Visible = false;
+            car_report_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
 
             manage_customer_order_panel.Visible = true;
             bind_order_data("");
@@ -261,7 +281,13 @@ namespace ABC_Car_Traders
             manage_part_details_panel.Visible = false;
             manage_car_details_panel.Visible = false;
             manage_customer_details_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
             manage_customer_order_panel.Visible = false;
+            car_report_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
+
 
             report_panel.Visible = true;
         }
@@ -917,6 +943,208 @@ namespace ABC_Car_Traders
                 conn.Close();
             }
 
+        }
+
+        private void generate_car_report_btn_Click(object sender, EventArgs e)
+        {
+            car_report_panel.Visible = true;
+
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
+            report_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
+        }
+
+        private void view_report_Btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connection_string);
+
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("select * from CarDetails", con);
+            SqlDataAdapter adap = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adap.Fill(ds, "CarDetails");
+            CrystalReport2 cr1 = new CrystalReport2();
+            cr1.SetDataSource(ds);
+            crystalReportViewer1.ReportSource = cr1;
+            crystalReportViewer1.Refresh();
+            con.Close();
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            car_report_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
+            order_view_panel.Visible = false;
+
+            report_panel.Visible = true;
+        }
+
+        private void generate_part_report_btn_Click(object sender, EventArgs e)
+        {
+            car_part_detail_panel.Visible = true;
+
+            car_report_panel.Visible = false;
+
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            report_panel.Visible = false;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+
+        }
+
+        private void view_part_report_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connection_string);
+
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("select * from CarParts", con);
+            SqlDataAdapter adap = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adap.Fill(ds, "CarParts");
+            CrystalReport3 cr1 = new CrystalReport3();
+            cr1.SetDataSource(ds);
+            crystalReportViewer2.ReportSource = cr1;
+            crystalReportViewer2.Refresh();
+            con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            car_report_panel.Visible = false;
+
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            car_part_detail_panel.Visible = false;
+            report_panel.Visible = true;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+        }
+
+        private void manage_customer_report_btn_Click(object sender, EventArgs e)
+        {
+            customer_detail_report_panel.Visible = true;
+
+            car_part_detail_panel.Visible = false;
+            car_report_panel.Visible = false;
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            report_panel.Visible = false;
+            order_view_panel.Visible = false;
+        }
+
+        private void customer_exit_btn_Click(object sender, EventArgs e)
+        {
+            car_part_detail_panel.Visible = false;
+
+            car_report_panel.Visible = false;
+
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            report_panel.Visible = true;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+        }
+
+        private void customer_report_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connection_string);
+
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("select * from user_details", con);
+            SqlDataAdapter adap = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adap.Fill(ds, "user_details");
+            CrystalReport4 cr1 = new CrystalReport4();
+            cr1.SetDataSource(ds);
+            crystalReportViewer3.ReportSource = cr1;
+            crystalReportViewer3.Refresh();
+            con.Close();
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crystalReportViewer3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            order_view_panel.Visible = true;
+
+            customer_detail_report_panel.Visible = true;
+
+            car_part_detail_panel.Visible = false;
+            car_report_panel.Visible = false;
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            report_panel.Visible = false;
+
+
+        }
+
+        private void order_report_exit_btn_Click(object sender, EventArgs e)
+        {
+            car_part_detail_panel.Visible = false;
+
+            car_report_panel.Visible = false;
+
+            manage_part_details_panel.Visible = false;
+            manage_car_details_panel.Visible = false;
+            manage_customer_details_panel.Visible = false;
+            manage_customer_order_panel.Visible = false;
+            report_panel.Visible = true;
+            customer_detail_report_panel.Visible = false;
+            order_view_panel.Visible = false;
+        }
+
+        private void view_order_report_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connection_string);
+
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("select * from Orders", con);
+            SqlDataAdapter adap = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adap.Fill(ds, "Orders");
+            CrystalReport5 cr1 = new CrystalReport5();
+            cr1.SetDataSource(ds);
+            crystalReportViewer4.ReportSource = cr1;
+            crystalReportViewer4.Refresh();
+            con.Close();
         }
     }
 }

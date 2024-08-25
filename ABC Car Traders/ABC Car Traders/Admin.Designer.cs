@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle181 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle182 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle183 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle184 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle185 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle186 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle187 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle188 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle189 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle190 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle191 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle192 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
             this.manage_customer_details_btn = new System.Windows.Forms.Button();
             this.manage_Car_parts_details_btn = new System.Windows.Forms.Button();
             this.manage_car_details_btn = new System.Windows.Forms.Button();
@@ -185,6 +185,26 @@
             this.manage_customer_report_btn = new System.Windows.Forms.Button();
             this.generate_part_report_btn = new System.Windows.Forms.Button();
             this.generate_car_report_btn = new System.Windows.Forms.Button();
+            this.car_report_panel = new System.Windows.Forms.Panel();
+            this.customer_detail_report_panel = new System.Windows.Forms.Panel();
+            this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.customer_report_btn = new System.Windows.Forms.Button();
+            this.customer_exit_btn = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.view_report_Btn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
+            this.label38 = new System.Windows.Forms.Label();
+            this.car_part_detail_panel = new System.Windows.Forms.Panel();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.view_part_report_btn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.order_view_panel = new System.Windows.Forms.Panel();
+            this.crystalReportViewer4 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.view_order_report_btn = new System.Windows.Forms.Button();
+            this.order_report_exit_btn = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
             this.manage_part_details_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_parts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.part_pictureBox)).BeginInit();
@@ -197,6 +217,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_or_part_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_order)).BeginInit();
             this.report_panel.SuspendLayout();
+            this.car_report_panel.SuspendLayout();
+            this.customer_detail_report_panel.SuspendLayout();
+            this.car_part_detail_panel.SuspendLayout();
+            this.order_view_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // manage_customer_details_btn
@@ -313,21 +337,21 @@
             this.dataGridView_admin_parts.AllowUserToDeleteRows = false;
             this.dataGridView_admin_parts.AllowUserToResizeColumns = false;
             this.dataGridView_admin_parts.AllowUserToResizeRows = false;
-            dataGridViewCellStyle177.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle177.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle177.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_admin_parts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle177;
+            dataGridViewCellStyle145.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle145.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle145.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_admin_parts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle145;
             this.dataGridView_admin_parts.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView_admin_parts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_admin_parts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle178.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle178.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle178.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle178.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle178.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle178.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle178.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_parts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle178;
+            dataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle146.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle146.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle146.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle146.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle146.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_parts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle146;
             this.dataGridView_admin_parts.ColumnHeadersHeight = 40;
             this.dataGridView_admin_parts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn12,
@@ -340,26 +364,26 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
             this.Column12});
-            dataGridViewCellStyle179.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle179.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle179.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle179.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle179.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle179.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle179.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_admin_parts.DefaultCellStyle = dataGridViewCellStyle179;
+            dataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle147.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle147.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle147.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle147.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle147.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle147.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_admin_parts.DefaultCellStyle = dataGridViewCellStyle147;
             this.dataGridView_admin_parts.EnableHeadersVisualStyles = false;
             this.dataGridView_admin_parts.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView_admin_parts.Location = new System.Drawing.Point(14, 269);
             this.dataGridView_admin_parts.Name = "dataGridView_admin_parts";
-            dataGridViewCellStyle180.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle180.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle180.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle180.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle180.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle180.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle180.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_parts.RowHeadersDefaultCellStyle = dataGridViewCellStyle180;
+            dataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle148.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle148.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle148.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle148.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle148.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle148.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_parts.RowHeadersDefaultCellStyle = dataGridViewCellStyle148;
             this.dataGridView_admin_parts.RowHeadersVisible = false;
             this.dataGridView_admin_parts.RowTemplate.Height = 24;
             this.dataGridView_admin_parts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -806,21 +830,21 @@
             this.dataGridView_admin_car.AllowUserToDeleteRows = false;
             this.dataGridView_admin_car.AllowUserToResizeColumns = false;
             this.dataGridView_admin_car.AllowUserToResizeRows = false;
-            dataGridViewCellStyle181.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle181.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle181.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_admin_car.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle181;
+            dataGridViewCellStyle149.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle149.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle149.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_admin_car.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle149;
             this.dataGridView_admin_car.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView_admin_car.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_admin_car.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle182.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle182.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle182.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle182.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle182.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle182.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle182.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_car.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle182;
+            dataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle150.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle150.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle150.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle150.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle150.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle150.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_car.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle150;
             this.dataGridView_admin_car.ColumnHeadersHeight = 40;
             this.dataGridView_admin_car.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -834,26 +858,26 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            dataGridViewCellStyle183.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle183.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle183.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle183.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle183.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle183.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle183.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_admin_car.DefaultCellStyle = dataGridViewCellStyle183;
+            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle151.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle151.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle151.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle151.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle151.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle151.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_admin_car.DefaultCellStyle = dataGridViewCellStyle151;
             this.dataGridView_admin_car.EnableHeadersVisualStyles = false;
             this.dataGridView_admin_car.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView_admin_car.Location = new System.Drawing.Point(13, 313);
             this.dataGridView_admin_car.Name = "dataGridView_admin_car";
-            dataGridViewCellStyle184.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle184.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle184.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle184.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle184.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle184.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle184.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_car.RowHeadersDefaultCellStyle = dataGridViewCellStyle184;
+            dataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle152.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle152.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle152.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle152.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_car.RowHeadersDefaultCellStyle = dataGridViewCellStyle152;
             this.dataGridView_admin_car.RowHeadersVisible = false;
             this.dataGridView_admin_car.RowTemplate.Height = 24;
             this.dataGridView_admin_car.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1243,21 +1267,21 @@
             this.dataGridView_admin_user.AllowUserToDeleteRows = false;
             this.dataGridView_admin_user.AllowUserToResizeColumns = false;
             this.dataGridView_admin_user.AllowUserToResizeRows = false;
-            dataGridViewCellStyle185.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle185.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle185.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_admin_user.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle185;
+            dataGridViewCellStyle153.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle153.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle153.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_admin_user.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle153;
             this.dataGridView_admin_user.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView_admin_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_admin_user.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle186.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle186.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle186.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle186.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle186.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle186.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle186.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_user.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle186;
+            dataGridViewCellStyle154.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle154.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle154.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle154.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle154.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle154.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle154.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_user.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle154;
             this.dataGridView_admin_user.ColumnHeadersHeight = 40;
             this.dataGridView_admin_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1265,26 +1289,26 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            dataGridViewCellStyle187.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle187.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle187.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle187.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle187.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle187.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle187.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_admin_user.DefaultCellStyle = dataGridViewCellStyle187;
+            dataGridViewCellStyle155.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle155.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle155.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle155.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle155.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle155.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle155.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_admin_user.DefaultCellStyle = dataGridViewCellStyle155;
             this.dataGridView_admin_user.EnableHeadersVisualStyles = false;
             this.dataGridView_admin_user.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView_admin_user.Location = new System.Drawing.Point(13, 261);
             this.dataGridView_admin_user.Name = "dataGridView_admin_user";
-            dataGridViewCellStyle188.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle188.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle188.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle188.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle188.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle188.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle188.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_user.RowHeadersDefaultCellStyle = dataGridViewCellStyle188;
+            dataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle156.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle156.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle156.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle156.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle156.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle156.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_user.RowHeadersDefaultCellStyle = dataGridViewCellStyle156;
             this.dataGridView_admin_user.RowHeadersVisible = false;
             this.dataGridView_admin_user.RowTemplate.Height = 24;
             this.dataGridView_admin_user.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1525,21 +1549,21 @@
             this.dataGridView_admin_order.AllowUserToDeleteRows = false;
             this.dataGridView_admin_order.AllowUserToResizeColumns = false;
             this.dataGridView_admin_order.AllowUserToResizeRows = false;
-            dataGridViewCellStyle189.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle189.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle189.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_admin_order.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle189;
+            dataGridViewCellStyle157.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle157.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle157.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_admin_order.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle157;
             this.dataGridView_admin_order.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridView_admin_order.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_admin_order.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle190.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle190.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle190.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle190.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle190.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle190.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle190.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle190;
+            dataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle158.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle158.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle158.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle158.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle158.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle158.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle158;
             this.dataGridView_admin_order.ColumnHeadersHeight = 40;
             this.dataGridView_admin_order.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -1552,26 +1576,26 @@
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23,
             this.Column13});
-            dataGridViewCellStyle191.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle191.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle191.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle191.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle191.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle191.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle191.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_admin_order.DefaultCellStyle = dataGridViewCellStyle191;
+            dataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle159.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle159.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle159.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle159.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle159.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle159.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_admin_order.DefaultCellStyle = dataGridViewCellStyle159;
             this.dataGridView_admin_order.EnableHeadersVisualStyles = false;
             this.dataGridView_admin_order.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView_admin_order.Location = new System.Drawing.Point(13, 256);
             this.dataGridView_admin_order.Name = "dataGridView_admin_order";
-            dataGridViewCellStyle192.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle192.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle192.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle192.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle192.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle192.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle192.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_admin_order.RowHeadersDefaultCellStyle = dataGridViewCellStyle192;
+            dataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle160.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle160.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle160.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle160.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle160.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle160.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_admin_order.RowHeadersDefaultCellStyle = dataGridViewCellStyle160;
             this.dataGridView_admin_order.RowHeadersVisible = false;
             this.dataGridView_admin_order.RowTemplate.Height = 24;
             this.dataGridView_admin_order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1902,6 +1926,7 @@
             this.button3.Size = new System.Drawing.Size(340, 270);
             this.button3.TabIndex = 3;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // manage_customer_report_btn
             // 
@@ -1913,6 +1938,7 @@
             this.manage_customer_report_btn.Size = new System.Drawing.Size(340, 270);
             this.manage_customer_report_btn.TabIndex = 2;
             this.manage_customer_report_btn.UseVisualStyleBackColor = true;
+            this.manage_customer_report_btn.Click += new System.EventHandler(this.manage_customer_report_btn_Click);
             // 
             // generate_part_report_btn
             // 
@@ -1924,6 +1950,7 @@
             this.generate_part_report_btn.Size = new System.Drawing.Size(340, 270);
             this.generate_part_report_btn.TabIndex = 1;
             this.generate_part_report_btn.UseVisualStyleBackColor = true;
+            this.generate_part_report_btn.Click += new System.EventHandler(this.generate_part_report_btn_Click);
             // 
             // generate_car_report_btn
             // 
@@ -1935,6 +1962,257 @@
             this.generate_car_report_btn.Size = new System.Drawing.Size(340, 270);
             this.generate_car_report_btn.TabIndex = 0;
             this.generate_car_report_btn.UseVisualStyleBackColor = true;
+            this.generate_car_report_btn.Click += new System.EventHandler(this.generate_car_report_btn_Click);
+            // 
+            // car_report_panel
+            // 
+            this.car_report_panel.BackColor = System.Drawing.Color.DarkGray;
+            this.car_report_panel.Controls.Add(this.crystalReportViewer1);
+            this.car_report_panel.Controls.Add(this.view_report_Btn);
+            this.car_report_panel.Controls.Add(this.exitBtn);
+            this.car_report_panel.Controls.Add(this.label38);
+            this.car_report_panel.Location = new System.Drawing.Point(426, 90);
+            this.car_report_panel.Name = "car_report_panel";
+            this.car_report_panel.Size = new System.Drawing.Size(1045, 620);
+            this.car_report_panel.TabIndex = 76;
+            // 
+            // customer_detail_report_panel
+            // 
+            this.customer_detail_report_panel.BackColor = System.Drawing.Color.DarkGray;
+            this.customer_detail_report_panel.Controls.Add(this.order_view_panel);
+            this.customer_detail_report_panel.Controls.Add(this.crystalReportViewer3);
+            this.customer_detail_report_panel.Controls.Add(this.customer_report_btn);
+            this.customer_detail_report_panel.Controls.Add(this.customer_exit_btn);
+            this.customer_detail_report_panel.Controls.Add(this.label40);
+            this.customer_detail_report_panel.Location = new System.Drawing.Point(426, 90);
+            this.customer_detail_report_panel.Name = "customer_detail_report_panel";
+            this.customer_detail_report_panel.Size = new System.Drawing.Size(1045, 620);
+            this.customer_detail_report_panel.TabIndex = 4;
+            // 
+            // crystalReportViewer3
+            // 
+            this.crystalReportViewer3.ActiveViewIndex = -1;
+            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer3.Location = new System.Drawing.Point(3, 45);
+            this.crystalReportViewer3.Name = "crystalReportViewer3";
+            this.crystalReportViewer3.Size = new System.Drawing.Size(1039, 522);
+            this.crystalReportViewer3.TabIndex = 37;
+            this.crystalReportViewer3.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crystalReportViewer3.Load += new System.EventHandler(this.crystalReportViewer3_Load);
+            // 
+            // customer_report_btn
+            // 
+            this.customer_report_btn.BackColor = System.Drawing.Color.Turquoise;
+            this.customer_report_btn.FlatAppearance.BorderSize = 0;
+            this.customer_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customer_report_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customer_report_btn.Location = new System.Drawing.Point(800, 573);
+            this.customer_report_btn.Name = "customer_report_btn";
+            this.customer_report_btn.Size = new System.Drawing.Size(242, 44);
+            this.customer_report_btn.TabIndex = 36;
+            this.customer_report_btn.Text = "View Report";
+            this.customer_report_btn.UseVisualStyleBackColor = false;
+            this.customer_report_btn.Click += new System.EventHandler(this.customer_report_btn_Click);
+            // 
+            // customer_exit_btn
+            // 
+            this.customer_exit_btn.BackColor = System.Drawing.Color.LightPink;
+            this.customer_exit_btn.FlatAppearance.BorderSize = 0;
+            this.customer_exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customer_exit_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customer_exit_btn.Location = new System.Drawing.Point(3, 571);
+            this.customer_exit_btn.Name = "customer_exit_btn";
+            this.customer_exit_btn.Size = new System.Drawing.Size(242, 44);
+            this.customer_exit_btn.TabIndex = 35;
+            this.customer_exit_btn.Text = "Exit";
+            this.customer_exit_btn.UseVisualStyleBackColor = false;
+            this.customer_exit_btn.Click += new System.EventHandler(this.customer_exit_btn_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(347, 4);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(360, 34);
+            this.label40.TabIndex = 34;
+            this.label40.Tag = "any";
+            this.label40.Text = "Customer Details Report";
+            this.label40.Click += new System.EventHandler(this.label40_Click);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 46);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1039, 522);
+            this.crystalReportViewer1.TabIndex = 33;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // view_report_Btn
+            // 
+            this.view_report_Btn.BackColor = System.Drawing.Color.Turquoise;
+            this.view_report_Btn.FlatAppearance.BorderSize = 0;
+            this.view_report_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.view_report_Btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_report_Btn.Location = new System.Drawing.Point(800, 574);
+            this.view_report_Btn.Name = "view_report_Btn";
+            this.view_report_Btn.Size = new System.Drawing.Size(242, 44);
+            this.view_report_Btn.TabIndex = 32;
+            this.view_report_Btn.Text = "View Report";
+            this.view_report_Btn.UseVisualStyleBackColor = false;
+            this.view_report_Btn.Click += new System.EventHandler(this.view_report_Btn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.LightPink;
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(3, 572);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(242, 44);
+            this.exitBtn.TabIndex = 31;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(388, 5);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(272, 34);
+            this.label38.TabIndex = 1;
+            this.label38.Tag = "any";
+            this.label38.Text = "Car Details Report";
+            // 
+            // car_part_detail_panel
+            // 
+            this.car_part_detail_panel.BackColor = System.Drawing.Color.DarkGray;
+            this.car_part_detail_panel.Controls.Add(this.crystalReportViewer2);
+            this.car_part_detail_panel.Controls.Add(this.view_part_report_btn);
+            this.car_part_detail_panel.Controls.Add(this.button2);
+            this.car_part_detail_panel.Controls.Add(this.label39);
+            this.car_part_detail_panel.Location = new System.Drawing.Point(426, 90);
+            this.car_part_detail_panel.Name = "car_part_detail_panel";
+            this.car_part_detail_panel.Size = new System.Drawing.Size(1045, 620);
+            this.car_part_detail_panel.TabIndex = 4;
+            // 
+            // crystalReportViewer2
+            // 
+            this.crystalReportViewer2.ActiveViewIndex = -1;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(3, 45);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.Size = new System.Drawing.Size(1039, 522);
+            this.crystalReportViewer2.TabIndex = 37;
+            this.crystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // view_part_report_btn
+            // 
+            this.view_part_report_btn.BackColor = System.Drawing.Color.Turquoise;
+            this.view_part_report_btn.FlatAppearance.BorderSize = 0;
+            this.view_part_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.view_part_report_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_part_report_btn.Location = new System.Drawing.Point(800, 573);
+            this.view_part_report_btn.Name = "view_part_report_btn";
+            this.view_part_report_btn.Size = new System.Drawing.Size(242, 44);
+            this.view_part_report_btn.TabIndex = 36;
+            this.view_part_report_btn.Text = "View Report";
+            this.view_part_report_btn.UseVisualStyleBackColor = false;
+            this.view_part_report_btn.Click += new System.EventHandler(this.view_part_report_btn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightPink;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(3, 571);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(242, 44);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(337, 4);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(353, 34);
+            this.label39.TabIndex = 34;
+            this.label39.Tag = "any";
+            this.label39.Text = "Car Parts Details Report";
+            // 
+            // order_view_panel
+            // 
+            this.order_view_panel.Controls.Add(this.crystalReportViewer4);
+            this.order_view_panel.Controls.Add(this.view_order_report_btn);
+            this.order_view_panel.Controls.Add(this.order_report_exit_btn);
+            this.order_view_panel.Controls.Add(this.label41);
+            this.order_view_panel.Location = new System.Drawing.Point(0, 0);
+            this.order_view_panel.Name = "order_view_panel";
+            this.order_view_panel.Size = new System.Drawing.Size(1045, 620);
+            this.order_view_panel.TabIndex = 38;
+            // 
+            // crystalReportViewer4
+            // 
+            this.crystalReportViewer4.ActiveViewIndex = -1;
+            this.crystalReportViewer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer4.Location = new System.Drawing.Point(3, 43);
+            this.crystalReportViewer4.Name = "crystalReportViewer4";
+            this.crystalReportViewer4.Size = new System.Drawing.Size(1039, 522);
+            this.crystalReportViewer4.TabIndex = 41;
+            this.crystalReportViewer4.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // view_order_report_btn
+            // 
+            this.view_order_report_btn.BackColor = System.Drawing.Color.Turquoise;
+            this.view_order_report_btn.FlatAppearance.BorderSize = 0;
+            this.view_order_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.view_order_report_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_order_report_btn.Location = new System.Drawing.Point(800, 571);
+            this.view_order_report_btn.Name = "view_order_report_btn";
+            this.view_order_report_btn.Size = new System.Drawing.Size(242, 44);
+            this.view_order_report_btn.TabIndex = 40;
+            this.view_order_report_btn.Text = "View Report";
+            this.view_order_report_btn.UseVisualStyleBackColor = false;
+            this.view_order_report_btn.Click += new System.EventHandler(this.view_order_report_btn_Click);
+            // 
+            // order_report_exit_btn
+            // 
+            this.order_report_exit_btn.BackColor = System.Drawing.Color.LightPink;
+            this.order_report_exit_btn.FlatAppearance.BorderSize = 0;
+            this.order_report_exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.order_report_exit_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.order_report_exit_btn.Location = new System.Drawing.Point(3, 569);
+            this.order_report_exit_btn.Name = "order_report_exit_btn";
+            this.order_report_exit_btn.Size = new System.Drawing.Size(242, 44);
+            this.order_report_exit_btn.TabIndex = 39;
+            this.order_report_exit_btn.Text = "Exit";
+            this.order_report_exit_btn.UseVisualStyleBackColor = false;
+            this.order_report_exit_btn.Click += new System.EventHandler(this.order_report_exit_btn_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(304, 2);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(449, 34);
+            this.label41.TabIndex = 38;
+            this.label41.Tag = "any";
+            this.label41.Text = "Customer Order Details Report";
             // 
             // Admin_form
             // 
@@ -1943,16 +2221,19 @@
             this.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.admin_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1555, 779);
+            this.Controls.Add(this.manage_car_details_panel);
+            this.Controls.Add(this.customer_detail_report_panel);
             this.Controls.Add(this.generate_reports_btn);
             this.Controls.Add(this.manage_customer_order_details_btn);
             this.Controls.Add(this.manage_customer_details_btn);
             this.Controls.Add(this.manage_Car_parts_details_btn);
             this.Controls.Add(this.manage_car_details_btn);
-            this.Controls.Add(this.manage_customer_order_panel);
+            this.Controls.Add(this.car_report_panel);
+            this.Controls.Add(this.car_part_detail_panel);
             this.Controls.Add(this.report_panel);
-            this.Controls.Add(this.manage_car_details_panel);
             this.Controls.Add(this.manage_part_details_panel);
             this.Controls.Add(this.manage_customer_details_panel);
+            this.Controls.Add(this.manage_customer_order_panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_form";
@@ -1975,6 +2256,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.car_or_part_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_admin_order)).EndInit();
             this.report_panel.ResumeLayout(false);
+            this.car_report_panel.ResumeLayout(false);
+            this.car_report_panel.PerformLayout();
+            this.customer_detail_report_panel.ResumeLayout(false);
+            this.customer_detail_report_panel.PerformLayout();
+            this.car_part_detail_panel.ResumeLayout(false);
+            this.car_part_detail_panel.PerformLayout();
+            this.order_view_panel.ResumeLayout(false);
+            this.order_view_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2122,5 +2411,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.Panel car_report_panel;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.Button view_report_Btn;
+        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel car_part_detail_panel;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private System.Windows.Forms.Button view_part_report_btn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Panel customer_detail_report_panel;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private System.Windows.Forms.Button customer_report_btn;
+        private System.Windows.Forms.Button customer_exit_btn;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Panel order_view_panel;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer4;
+        private System.Windows.Forms.Button view_order_report_btn;
+        private System.Windows.Forms.Button order_report_exit_btn;
+        private System.Windows.Forms.Label label41;
     }
 }
