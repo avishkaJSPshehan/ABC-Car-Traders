@@ -775,6 +775,149 @@ namespace ABC_Car_Traders
             }
 
         }
+
+        private void insert_order_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+
+                conn.Open();
+
+                string query = "INSERT INTO Orders (order_id, car_model, customer_name, customer_email, customer_phone, order_date, total_amount, payment_status, order_status,item_image) " +
+                "VALUES (@order_id, @car_model, @customer_name, @customer_email, @customer_phone, @order_date, @total_amount, @payment_status,@order_status,@item_image)";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                string path = Path.Combine(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\Assets\Customer Order\" +
+                            car_model_textBox.Text + customer_name_textBox.Text.Trim() + ".jpg");
+
+                string directoryPath = Path.GetDirectoryName(path);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.Copy(car_or_part_pictureBox.ImageLocation, path, true);
+
+                // Add parameters to prevent SQL injection
+                comm_2.Parameters.AddWithValue("@order_id", order_id_textBox.Text);
+                comm_2.Parameters.AddWithValue("@car_model", car_model_textBox.Text);
+                comm_2.Parameters.AddWithValue("@customer_name", customer_name_textBox.Text);
+                comm_2.Parameters.AddWithValue("@customer_email", customer_email_textBox.Text);
+                comm_2.Parameters.AddWithValue("@customer_phone", customer_phone_textBox.Text);
+                comm_2.Parameters.AddWithValue("@order_date", order_date_textBox.Text);
+                comm_2.Parameters.AddWithValue("@total_amount", total_amount_textBox.Text);
+                comm_2.Parameters.AddWithValue("@payment_status", payment_status_textBox.Text);
+                comm_2.Parameters.AddWithValue("@order_status", order_status_textBox.Text);
+                comm_2.Parameters.AddWithValue("@item_image", path);
+
+                // Execute the command
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Car Part Details Successfully Added");
+                bind_order_data("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void update_order_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+
+
+                string query = "UPDATE Orders SET car_model = @car_model, customer_name = @customer_name, customer_email = @customer_email, customer_phone = @customer_phone, order_date = @order_date, total_amount = @total_amount, payment_status = @payment_status, order_status = @order_status, item_image = @item_image WHERE order_id = @order_id";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                string path = Path.Combine(@"D:\Programming Projects\Motors\ABC Car Traders\ABC Car Traders\Assets\Customer Order\" +
+                            car_model_textBox.Text + customer_name_textBox.Text.Trim() + ".jpg");
+
+                string directoryPath = Path.GetDirectoryName(path);
+
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.Copy(car_or_part_pictureBox.ImageLocation, path, true);
+
+
+                comm_2.Parameters.AddWithValue("@order_id", order_id_textBox.Text); 
+                comm_2.Parameters.AddWithValue("@car_model", car_model_textBox.Text);
+                comm_2.Parameters.AddWithValue("@customer_name", customer_name_textBox.Text);
+                comm_2.Parameters.AddWithValue("@customer_email", customer_email_textBox.Text);
+                comm_2.Parameters.AddWithValue("@customer_phone", customer_phone_textBox.Text);
+                comm_2.Parameters.AddWithValue("@order_date", order_date_textBox.Text);
+                comm_2.Parameters.AddWithValue("@total_amount", total_amount_textBox.Text);
+                comm_2.Parameters.AddWithValue("@payment_status", payment_status_textBox.Text);
+                comm_2.Parameters.AddWithValue("@order_status", order_status_textBox.Text);
+                comm_2.Parameters.AddWithValue("@item_image", path);
+
+
+                comm_2.ExecuteNonQuery();
+
+                MessageBox.Show("Order Details Successfully Updated");
+                bind_order_data(""); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void delete_order_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            try
+            {
+                conn.Open();
+
+                string query = "DELETE FROM Orders WHERE order_id = @order_id";
+
+                SqlCommand comm_2 = new SqlCommand(query, conn);
+
+                comm_2.Parameters.AddWithValue("@order_id", order_id_textBox.Text); 
+
+
+                int rowsAffected = comm_2.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Order Successfully Deleted");
+                    bind_order_data(""); 
+                }
+                else
+                {
+                    MessageBox.Show("No matching order found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
     }
 }
 
